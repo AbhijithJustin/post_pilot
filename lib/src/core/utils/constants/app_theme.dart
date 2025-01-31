@@ -21,5 +21,15 @@ class AppTheme {
         textStyle: AppStyles.bodyText,
       ),
     ),
+    inputDecorationTheme: const InputDecorationTheme(
+      border: OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.all(Radius.circular(15)),
+        borderSide: BorderSide(color: AppColors.primary),
+      ),
+      contentPadding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+    ),
   );
 }
