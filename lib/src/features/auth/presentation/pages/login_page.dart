@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:post_pilot/src/core/widgets/app_sized_box.dart';
+import 'package:post_pilot/src/features/auth/presentation/bloc/auth_bloc.dart';
 
 import '../../../../core/utils/constants/app_colors.dart';
 
@@ -56,19 +58,29 @@ class LoginPage extends StatelessWidget {
               Hero(
                 tag: "password",
                 child: Material(
-                  child: TextField(
-                    controller: _passwordController,
-                    decoration: InputDecoration(
-                      hintText: 'Enter your password',
-                      prefixIcon: Icon(Icons.lock),
-                      suffixIcon: IconButton(
-                        icon: Icon(Icons.visibility_off),
-                        onPressed: () {},
-                      ),
-                      contentPadding:
-                          EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                    ),
-                    obscureText: true,
+                  child: BlocBuilder<AuthBloc, AuthState>(
+                    builder: (context, state) {
+                      return TextField(
+                        controller: _passwordController,
+                        decoration: InputDecoration(
+                          hintText: 'Enter your password',
+                          prefixIcon: Icon(Icons.lock),
+                          suffixIcon: IconButton(
+                            icon: Icon(state.showPassword
+                                ? Icons.visibility
+                                : Icons.visibility_off),
+                            onPressed: () {
+                              context
+                                  .read<AuthBloc>()
+                                  .add(AuthEvent.showLoginPassword());
+                            },
+                          ),
+                          contentPadding: EdgeInsets.symmetric(
+                              vertical: 16, horizontal: 16),
+                        ),
+                        obscureText: !state.showPassword,
+                      );
+                    },
                   ),
                 ),
               ),

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:post_pilot/src/core/widgets/page_navigation_root/slide_transition_rout.dart';
-import 'package:post_pilot/src/features/auth/presentation/pages/login_page.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:post_pilot/src/features/auth/presentation/bloc/auth_bloc.dart';
 import '../../../../core/utils/constants/app_colors.dart';
 import '../../../../core/widgets/app_sized_box.dart';
 
@@ -73,47 +72,67 @@ class RegisterPage extends StatelessWidget {
               Hero(
                 tag: "password",
                 child: Material(
-                  child: TextField(
-                    controller: _passwordController,
-                    decoration: InputDecoration(
-                      hintText: 'Enter your password',
-                      prefixIcon: Icon(Icons.lock),
-                      suffixIcon: IconButton(
-                        icon: Icon(Icons.visibility_off),
-                        onPressed: () {},
-                      ),
-                      contentPadding:
-                          EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(15.0),
-                        borderSide:
-                            BorderSide(color: AppColors.secondary, width: 2.0),
-                      ),
-                    ),
-                    obscureText: true,
+                  child: BlocBuilder<AuthBloc, AuthState>(
+                    builder: (context, state) {
+                      return TextField(
+                        controller: _passwordController,
+                        decoration: InputDecoration(
+                          hintText: 'Enter your password',
+                          prefixIcon: Icon(Icons.lock),
+                          suffixIcon: IconButton(
+                            icon: Icon(state.showRegisterPassword
+                                ? Icons.visibility
+                                : Icons.visibility_off),
+                            onPressed: () {
+                              context
+                                  .read<AuthBloc>()
+                                  .add(AuthEvent.showRegisterPassword());
+                            },
+                          ),
+                          contentPadding: EdgeInsets.symmetric(
+                              vertical: 16, horizontal: 16),
+                          focusedBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                            borderSide: BorderSide(
+                                color: AppColors.secondary, width: 2.0),
+                          ),
+                        ),
+                        obscureText: !state.showRegisterPassword,
+                      );
+                    },
                   ),
                 ),
               ),
               SizedBox(height: 40),
               Material(
-                child: TextField(
-                  controller: _conformPasswordController,
-                  decoration: InputDecoration(
-                    hintText: 'conform your password',
-                    prefixIcon: Icon(Icons.lock_person),
-                    suffixIcon: IconButton(
-                      icon: Icon(Icons.visibility_off),
-                      onPressed: () {},
-                    ),
-                    contentPadding:
-                        EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                    focusedBorder: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(15.0),
-                      borderSide:
-                          BorderSide(color: AppColors.secondary, width: 2.0),
-                    ),
-                  ),
-                  obscureText: true,
+                child: BlocBuilder<AuthBloc, AuthState>(
+                  builder: (context, state) {
+                    return TextField(
+                      controller: _conformPasswordController,
+                      decoration: InputDecoration(
+                        hintText: 'conform your password',
+                        prefixIcon: Icon(Icons.lock_person),
+                        suffixIcon: IconButton(
+                          icon: Icon(state.showConformPassword
+                              ? Icons.visibility
+                              : Icons.visibility_off),
+                          onPressed: () {
+                            context
+                                .read<AuthBloc>()
+                                .add(AuthEvent.showConformPassword());
+                          },
+                        ),
+                        contentPadding:
+                            EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                        focusedBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                          borderSide: BorderSide(
+                              color: AppColors.secondary, width: 2.0),
+                        ),
+                      ),
+                      obscureText: !state.showConformPassword,
+                    );
+                  },
                 ),
               ),
               SizedBox(height: 40),
