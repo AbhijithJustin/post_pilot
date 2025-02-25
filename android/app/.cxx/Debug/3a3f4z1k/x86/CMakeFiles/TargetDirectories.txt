@@ -1,0 +1,2 @@
+/Users/jai/Desktop/projects/post_pilot/android/app/.cxx/Debug/3a3f4z1k/x86/CMakeFiles/edit_cache.dir
+/Users/jai/Desktop/projects/post_pilot/android/app/.cxx/Debug/3a3f4z1k/x86/CMakeFiles/rebuild_cache.dir

@@ -5,6 +5,7 @@ import 'package:post_pilot/src/features/auth/presentation/bloc/auth_bloc.dart';
 import 'package:post_pilot/src/features/auth/presentation/pages/login_page.dart';
 import 'package:post_pilot/src/features/auth/presentation/pages/register_page.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:post_pilot/src/features/home/presentation/pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,6 +34,8 @@ class MyApp extends StatelessWidget {
 
             case '/register':
               return SlideTransitionRoute(page: RegisterPage());
+            case '/home':
+              return SlideTransitionRoute(page: HomePage());
             default:
               return null;
           }

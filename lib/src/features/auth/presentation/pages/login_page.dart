@@ -91,11 +91,11 @@ class LoginPage extends StatelessWidget {
                 tag: "button1",
                 child: ElevatedButton(
                   onPressed: () {
-                    // Implement login functionality here
-                    String email = _emailController.text;
-                    String password = _passwordController.text;
-                    // For now, just print the entered credentials
-                    print('Email: $email, Password: $password');
+                    if (_emailController.text == "myapp@gmail.com" &&
+                        _passwordController.text == "Myapp@123") {
+                      Navigator.pushNamed(context, '/home');
+                    }
+                    Navigator.pushNamed(context, '/home');
                   },
                   style: ElevatedButton.styleFrom(
                     minimumSize: Size(double.infinity, 50),

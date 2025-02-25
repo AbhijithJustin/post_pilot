@@ -10,10 +10,15 @@ class AppTheme {
     appBarTheme: AppBarTheme(
       backgroundColor: AppColors.primary,
       titleTextStyle: AppStyles.headline.copyWith(color: AppColors.background),
+      centerTitle: true,
+      iconTheme: const IconThemeData(color: AppColors.background),
     ),
     textTheme: const TextTheme(
       headlineLarge: AppStyles.headline,
       bodyLarge: AppStyles.bodyText,
+    ),
+    drawerTheme: const DrawerThemeData(
+      backgroundColor: AppColors.background,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
