@@ -35,7 +35,9 @@ class _HomePageState extends State<HomePage> {
           color: AppColors.background,
         ),
         backgroundColor: AppColors.secondary,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, '/post');
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: AnimatedBottomNavigationBar(

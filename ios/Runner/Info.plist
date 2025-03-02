@@ -47,5 +47,10 @@
 		<true/>
 		<key>UIStatusBarHidden</key>
 		<false/>
+		<!-- Added -->
+		<key>NSPhotoLibraryUsageDescription</key>
+		<string>Pick an image from gallery</string>
+		<key>NSCameraUsageDescription</key>
+		<string>Pick image from Camera</string>
 	</dict>
 </plist>

@@ -43,6 +43,10 @@ dependencies:
   json_serializable: ^6.9.3
   json_annotation: ^4.9.0
   animated_bottom_navigation_bar: ^1.4.0
+  widgets_easier: ^0.0.10
+  icons_plus: ^5.0.0
+  image_picker: ^1.1.2
+
 
 dev_dependencies:
   flutter_test:
