@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:post_pilot/service_locator.dart';
-import 'package:post_pilot/src/features/post/data/models/update_assets_image_model.dart';
+import 'package:post_pilot/src/features/post/data/models/update_assets_text_model.dart';
 import 'package:post_pilot/src/features/post/domain/usecases/post_usecase.dart';
 
 part 'post_event.dart';
@@ -66,13 +66,21 @@ class PostBloc extends Bloc<PostEvent, PostState> {
     on<UpdatePostText>((event, emit) async {
       if (state.postTextController.text.isNotEmpty) {
         await sl<PostUsecase>().call(
-          UpdateAssetsImageModel(
+          UpdateAssetsTextModel(
             stringValue: state.postTextController.text,
           ),
         );
         emit(state.copyWith(isPostTextEmpty: false));
       } else {
         emit(state.copyWith(isPostTextEmpty: true));
+      }
+    });
+    on<UploadImageToOrchestrator>((event, emit) async {
+      if (state.image != null) {
+        await sl<PostUsecase2>().call(state.image!);
+        emit(state.copyWith(isImageEmpty: false));
+      } else {
+        emit(state.copyWith(isImageEmpty: true));
       }
     });
   }

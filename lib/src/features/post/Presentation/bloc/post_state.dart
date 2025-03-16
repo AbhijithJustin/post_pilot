@@ -11,6 +11,7 @@ class PostState with _$PostState {
     bool? isLinkedinSelected,
     required bool isPostTextEmpty,
     required TextEditingController postTextController,
+    required bool isImageEmpty,
   }) = _PostState;
 
   factory PostState.initial() => PostState(
@@ -22,5 +23,6 @@ class PostState with _$PostState {
         isLinkedinSelected: false,
         isPostTextEmpty: false,
         postTextController: TextEditingController(text: ''),
+        isImageEmpty: false,
       );
 }

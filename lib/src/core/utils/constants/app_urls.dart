@@ -8,4 +8,6 @@ class AppUrls {
   static const String allJobsUrl = "${orchestratorUrl}odata/Jobs";
   static const String updateAssets =
       "${orchestratorUrl}odata/Assets(${AppUipathData.assetPostTextId})";
+  static const String uploadAssetImage =
+      "https://cloud.uipath.com/smartbortyfd/DefaultTenant/orchestrator_/odata/Buckets(127248)/UiPath.Server.Configuration.OData.GetWriteUri?path=image.jpg&expiryInMinutes=0";
 }

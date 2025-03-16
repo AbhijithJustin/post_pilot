@@ -22,6 +22,7 @@ mixin _$PostEvent {
     required TResult Function() uploadPhoto,
     required TResult Function() postTextNotifier,
     required TResult Function() updatePostText,
+    required TResult Function() uploadImageToOrchestrator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +31,7 @@ mixin _$PostEvent {
     TResult? Function()? uploadPhoto,
     TResult? Function()? postTextNotifier,
     TResult? Function()? updatePostText,
+    TResult? Function()? uploadImageToOrchestrator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +40,7 @@ mixin _$PostEvent {
     TResult Function()? uploadPhoto,
     TResult Function()? postTextNotifier,
     TResult Function()? updatePostText,
+    TResult Function()? uploadImageToOrchestrator,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +50,8 @@ mixin _$PostEvent {
     required TResult Function(UploadPhoto value) uploadPhoto,
     required TResult Function(PostTextNotifier value) postTextNotifier,
     required TResult Function(UpdatePostText value) updatePostText,
+    required TResult Function(UploadImageToOrchestrator value)
+        uploadImageToOrchestrator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +60,8 @@ mixin _$PostEvent {
     TResult? Function(UploadPhoto value)? uploadPhoto,
     TResult? Function(PostTextNotifier value)? postTextNotifier,
     TResult? Function(UpdatePostText value)? updatePostText,
+    TResult? Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +70,8 @@ mixin _$PostEvent {
     TResult Function(UploadPhoto value)? uploadPhoto,
     TResult Function(PostTextNotifier value)? postTextNotifier,
     TResult Function(UpdatePostText value)? updatePostText,
+    TResult Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -161,6 +170,7 @@ class _$SocialMediaSelectorImpl implements SocialMediaSelector {
     required TResult Function() uploadPhoto,
     required TResult Function() postTextNotifier,
     required TResult Function() updatePostText,
+    required TResult Function() uploadImageToOrchestrator,
   }) {
     return socialMediaSelector(index);
   }
@@ -172,6 +182,7 @@ class _$SocialMediaSelectorImpl implements SocialMediaSelector {
     TResult? Function()? uploadPhoto,
     TResult? Function()? postTextNotifier,
     TResult? Function()? updatePostText,
+    TResult? Function()? uploadImageToOrchestrator,
   }) {
     return socialMediaSelector?.call(index);
   }
@@ -183,6 +194,7 @@ class _$SocialMediaSelectorImpl implements SocialMediaSelector {
     TResult Function()? uploadPhoto,
     TResult Function()? postTextNotifier,
     TResult Function()? updatePostText,
+    TResult Function()? uploadImageToOrchestrator,
     required TResult orElse(),
   }) {
     if (socialMediaSelector != null) {
@@ -198,6 +210,8 @@ class _$SocialMediaSelectorImpl implements SocialMediaSelector {
     required TResult Function(UploadPhoto value) uploadPhoto,
     required TResult Function(PostTextNotifier value) postTextNotifier,
     required TResult Function(UpdatePostText value) updatePostText,
+    required TResult Function(UploadImageToOrchestrator value)
+        uploadImageToOrchestrator,
   }) {
     return socialMediaSelector(this);
   }
@@ -209,6 +223,8 @@ class _$SocialMediaSelectorImpl implements SocialMediaSelector {
     TResult? Function(UploadPhoto value)? uploadPhoto,
     TResult? Function(PostTextNotifier value)? postTextNotifier,
     TResult? Function(UpdatePostText value)? updatePostText,
+    TResult? Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
   }) {
     return socialMediaSelector?.call(this);
   }
@@ -220,6 +236,8 @@ class _$SocialMediaSelectorImpl implements SocialMediaSelector {
     TResult Function(UploadPhoto value)? uploadPhoto,
     TResult Function(PostTextNotifier value)? postTextNotifier,
     TResult Function(UpdatePostText value)? updatePostText,
+    TResult Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
     required TResult orElse(),
   }) {
     if (socialMediaSelector != null) {
@@ -287,6 +305,7 @@ class _$UploadPhotoImpl implements UploadPhoto {
     required TResult Function() uploadPhoto,
     required TResult Function() postTextNotifier,
     required TResult Function() updatePostText,
+    required TResult Function() uploadImageToOrchestrator,
   }) {
     return uploadPhoto();
   }
@@ -298,6 +317,7 @@ class _$UploadPhotoImpl implements UploadPhoto {
     TResult? Function()? uploadPhoto,
     TResult? Function()? postTextNotifier,
     TResult? Function()? updatePostText,
+    TResult? Function()? uploadImageToOrchestrator,
   }) {
     return uploadPhoto?.call();
   }
@@ -309,6 +329,7 @@ class _$UploadPhotoImpl implements UploadPhoto {
     TResult Function()? uploadPhoto,
     TResult Function()? postTextNotifier,
     TResult Function()? updatePostText,
+    TResult Function()? uploadImageToOrchestrator,
     required TResult orElse(),
   }) {
     if (uploadPhoto != null) {
@@ -324,6 +345,8 @@ class _$UploadPhotoImpl implements UploadPhoto {
     required TResult Function(UploadPhoto value) uploadPhoto,
     required TResult Function(PostTextNotifier value) postTextNotifier,
     required TResult Function(UpdatePostText value) updatePostText,
+    required TResult Function(UploadImageToOrchestrator value)
+        uploadImageToOrchestrator,
   }) {
     return uploadPhoto(this);
   }
@@ -335,6 +358,8 @@ class _$UploadPhotoImpl implements UploadPhoto {
     TResult? Function(UploadPhoto value)? uploadPhoto,
     TResult? Function(PostTextNotifier value)? postTextNotifier,
     TResult? Function(UpdatePostText value)? updatePostText,
+    TResult? Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
   }) {
     return uploadPhoto?.call(this);
   }
@@ -346,6 +371,8 @@ class _$UploadPhotoImpl implements UploadPhoto {
     TResult Function(UploadPhoto value)? uploadPhoto,
     TResult Function(PostTextNotifier value)? postTextNotifier,
     TResult Function(UpdatePostText value)? updatePostText,
+    TResult Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
     required TResult orElse(),
   }) {
     if (uploadPhoto != null) {
@@ -404,6 +431,7 @@ class _$PostTextNotifierImpl implements PostTextNotifier {
     required TResult Function() uploadPhoto,
     required TResult Function() postTextNotifier,
     required TResult Function() updatePostText,
+    required TResult Function() uploadImageToOrchestrator,
   }) {
     return postTextNotifier();
   }
@@ -415,6 +443,7 @@ class _$PostTextNotifierImpl implements PostTextNotifier {
     TResult? Function()? uploadPhoto,
     TResult? Function()? postTextNotifier,
     TResult? Function()? updatePostText,
+    TResult? Function()? uploadImageToOrchestrator,
   }) {
     return postTextNotifier?.call();
   }
@@ -426,6 +455,7 @@ class _$PostTextNotifierImpl implements PostTextNotifier {
     TResult Function()? uploadPhoto,
     TResult Function()? postTextNotifier,
     TResult Function()? updatePostText,
+    TResult Function()? uploadImageToOrchestrator,
     required TResult orElse(),
   }) {
     if (postTextNotifier != null) {
@@ -441,6 +471,8 @@ class _$PostTextNotifierImpl implements PostTextNotifier {
     required TResult Function(UploadPhoto value) uploadPhoto,
     required TResult Function(PostTextNotifier value) postTextNotifier,
     required TResult Function(UpdatePostText value) updatePostText,
+    required TResult Function(UploadImageToOrchestrator value)
+        uploadImageToOrchestrator,
   }) {
     return postTextNotifier(this);
   }
@@ -452,6 +484,8 @@ class _$PostTextNotifierImpl implements PostTextNotifier {
     TResult? Function(UploadPhoto value)? uploadPhoto,
     TResult? Function(PostTextNotifier value)? postTextNotifier,
     TResult? Function(UpdatePostText value)? updatePostText,
+    TResult? Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
   }) {
     return postTextNotifier?.call(this);
   }
@@ -463,6 +497,8 @@ class _$PostTextNotifierImpl implements PostTextNotifier {
     TResult Function(UploadPhoto value)? uploadPhoto,
     TResult Function(PostTextNotifier value)? postTextNotifier,
     TResult Function(UpdatePostText value)? updatePostText,
+    TResult Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
     required TResult orElse(),
   }) {
     if (postTextNotifier != null) {
@@ -521,6 +557,7 @@ class _$UpdatePostTextImpl implements UpdatePostText {
     required TResult Function() uploadPhoto,
     required TResult Function() postTextNotifier,
     required TResult Function() updatePostText,
+    required TResult Function() uploadImageToOrchestrator,
   }) {
     return updatePostText();
   }
@@ -532,6 +569,7 @@ class _$UpdatePostTextImpl implements UpdatePostText {
     TResult? Function()? uploadPhoto,
     TResult? Function()? postTextNotifier,
     TResult? Function()? updatePostText,
+    TResult? Function()? uploadImageToOrchestrator,
   }) {
     return updatePostText?.call();
   }
@@ -543,6 +581,7 @@ class _$UpdatePostTextImpl implements UpdatePostText {
     TResult Function()? uploadPhoto,
     TResult Function()? postTextNotifier,
     TResult Function()? updatePostText,
+    TResult Function()? uploadImageToOrchestrator,
     required TResult orElse(),
   }) {
     if (updatePostText != null) {
@@ -558,6 +597,8 @@ class _$UpdatePostTextImpl implements UpdatePostText {
     required TResult Function(UploadPhoto value) uploadPhoto,
     required TResult Function(PostTextNotifier value) postTextNotifier,
     required TResult Function(UpdatePostText value) updatePostText,
+    required TResult Function(UploadImageToOrchestrator value)
+        uploadImageToOrchestrator,
   }) {
     return updatePostText(this);
   }
@@ -569,6 +610,8 @@ class _$UpdatePostTextImpl implements UpdatePostText {
     TResult? Function(UploadPhoto value)? uploadPhoto,
     TResult? Function(PostTextNotifier value)? postTextNotifier,
     TResult? Function(UpdatePostText value)? updatePostText,
+    TResult? Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
   }) {
     return updatePostText?.call(this);
   }
@@ -580,6 +623,8 @@ class _$UpdatePostTextImpl implements UpdatePostText {
     TResult Function(UploadPhoto value)? uploadPhoto,
     TResult Function(PostTextNotifier value)? postTextNotifier,
     TResult Function(UpdatePostText value)? updatePostText,
+    TResult Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
     required TResult orElse(),
   }) {
     if (updatePostText != null) {
@@ -594,6 +639,135 @@ abstract class UpdatePostText implements PostEvent {
 }
 
 /// @nodoc
+abstract class _$$UploadImageToOrchestratorImplCopyWith<$Res> {
+  factory _$$UploadImageToOrchestratorImplCopyWith(
+          _$UploadImageToOrchestratorImpl value,
+          $Res Function(_$UploadImageToOrchestratorImpl) then) =
+      __$$UploadImageToOrchestratorImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UploadImageToOrchestratorImplCopyWithImpl<$Res>
+    extends _$PostEventCopyWithImpl<$Res, _$UploadImageToOrchestratorImpl>
+    implements _$$UploadImageToOrchestratorImplCopyWith<$Res> {
+  __$$UploadImageToOrchestratorImplCopyWithImpl(
+      _$UploadImageToOrchestratorImpl _value,
+      $Res Function(_$UploadImageToOrchestratorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PostEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$UploadImageToOrchestratorImpl implements UploadImageToOrchestrator {
+  const _$UploadImageToOrchestratorImpl();
+
+  @override
+  String toString() {
+    return 'PostEvent.uploadImageToOrchestrator()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UploadImageToOrchestratorImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) socialMediaSelector,
+    required TResult Function() uploadPhoto,
+    required TResult Function() postTextNotifier,
+    required TResult Function() updatePostText,
+    required TResult Function() uploadImageToOrchestrator,
+  }) {
+    return uploadImageToOrchestrator();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? socialMediaSelector,
+    TResult? Function()? uploadPhoto,
+    TResult? Function()? postTextNotifier,
+    TResult? Function()? updatePostText,
+    TResult? Function()? uploadImageToOrchestrator,
+  }) {
+    return uploadImageToOrchestrator?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? socialMediaSelector,
+    TResult Function()? uploadPhoto,
+    TResult Function()? postTextNotifier,
+    TResult Function()? updatePostText,
+    TResult Function()? uploadImageToOrchestrator,
+    required TResult orElse(),
+  }) {
+    if (uploadImageToOrchestrator != null) {
+      return uploadImageToOrchestrator();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SocialMediaSelector value) socialMediaSelector,
+    required TResult Function(UploadPhoto value) uploadPhoto,
+    required TResult Function(PostTextNotifier value) postTextNotifier,
+    required TResult Function(UpdatePostText value) updatePostText,
+    required TResult Function(UploadImageToOrchestrator value)
+        uploadImageToOrchestrator,
+  }) {
+    return uploadImageToOrchestrator(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SocialMediaSelector value)? socialMediaSelector,
+    TResult? Function(UploadPhoto value)? uploadPhoto,
+    TResult? Function(PostTextNotifier value)? postTextNotifier,
+    TResult? Function(UpdatePostText value)? updatePostText,
+    TResult? Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
+  }) {
+    return uploadImageToOrchestrator?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SocialMediaSelector value)? socialMediaSelector,
+    TResult Function(UploadPhoto value)? uploadPhoto,
+    TResult Function(PostTextNotifier value)? postTextNotifier,
+    TResult Function(UpdatePostText value)? updatePostText,
+    TResult Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
+    required TResult orElse(),
+  }) {
+    if (uploadImageToOrchestrator != null) {
+      return uploadImageToOrchestrator(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UploadImageToOrchestrator implements PostEvent {
+  const factory UploadImageToOrchestrator() = _$UploadImageToOrchestratorImpl;
+}
+
+/// @nodoc
 mixin _$PostState {
   Set<int> get selectedIndex => throw _privateConstructorUsedError;
   XFile? get image => throw _privateConstructorUsedError;
@@ -604,6 +778,7 @@ mixin _$PostState {
   bool get isPostTextEmpty => throw _privateConstructorUsedError;
   TextEditingController get postTextController =>
       throw _privateConstructorUsedError;
+  bool get isImageEmpty => throw _privateConstructorUsedError;
 
   /// Create a copy of PostState
   /// with the given fields replaced by the non-null parameter values.
@@ -625,7 +800,8 @@ abstract class $PostStateCopyWith<$Res> {
       bool? isTwitterSelected,
       bool? isLinkedinSelected,
       bool isPostTextEmpty,
-      TextEditingController postTextController});
+      TextEditingController postTextController,
+      bool isImageEmpty});
 }
 
 /// @nodoc
@@ -651,6 +827,7 @@ class _$PostStateCopyWithImpl<$Res, $Val extends PostState>
     Object? isLinkedinSelected = freezed,
     Object? isPostTextEmpty = null,
     Object? postTextController = null,
+    Object? isImageEmpty = null,
   }) {
     return _then(_value.copyWith(
       selectedIndex: null == selectedIndex
@@ -685,6 +862,10 @@ class _$PostStateCopyWithImpl<$Res, $Val extends PostState>
           ? _value.postTextController
           : postTextController // ignore: cast_nullable_to_non_nullable
               as TextEditingController,
+      isImageEmpty: null == isImageEmpty
+          ? _value.isImageEmpty
+          : isImageEmpty // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -705,7 +886,8 @@ abstract class _$$PostStateImplCopyWith<$Res>
       bool? isTwitterSelected,
       bool? isLinkedinSelected,
       bool isPostTextEmpty,
-      TextEditingController postTextController});
+      TextEditingController postTextController,
+      bool isImageEmpty});
 }
 
 /// @nodoc
@@ -729,6 +911,7 @@ class __$$PostStateImplCopyWithImpl<$Res>
     Object? isLinkedinSelected = freezed,
     Object? isPostTextEmpty = null,
     Object? postTextController = null,
+    Object? isImageEmpty = null,
   }) {
     return _then(_$PostStateImpl(
       selectedIndex: null == selectedIndex
@@ -763,6 +946,10 @@ class __$$PostStateImplCopyWithImpl<$Res>
           ? _value.postTextController
           : postTextController // ignore: cast_nullable_to_non_nullable
               as TextEditingController,
+      isImageEmpty: null == isImageEmpty
+          ? _value.isImageEmpty
+          : isImageEmpty // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -778,7 +965,8 @@ class _$PostStateImpl implements _PostState {
       this.isTwitterSelected,
       this.isLinkedinSelected,
       required this.isPostTextEmpty,
-      required this.postTextController})
+      required this.postTextController,
+      required this.isImageEmpty})
       : _selectedIndex = selectedIndex;
 
   final Set<int> _selectedIndex;
@@ -803,10 +991,12 @@ class _$PostStateImpl implements _PostState {
   final bool isPostTextEmpty;
   @override
   final TextEditingController postTextController;
+  @override
+  final bool isImageEmpty;
 
   @override
   String toString() {
-    return 'PostState(selectedIndex: $selectedIndex, image: $image, isInstagramSelected: $isInstagramSelected, isFacebookSelected: $isFacebookSelected, isTwitterSelected: $isTwitterSelected, isLinkedinSelected: $isLinkedinSelected, isPostTextEmpty: $isPostTextEmpty, postTextController: $postTextController)';
+    return 'PostState(selectedIndex: $selectedIndex, image: $image, isInstagramSelected: $isInstagramSelected, isFacebookSelected: $isFacebookSelected, isTwitterSelected: $isTwitterSelected, isLinkedinSelected: $isLinkedinSelected, isPostTextEmpty: $isPostTextEmpty, postTextController: $postTextController, isImageEmpty: $isImageEmpty)';
   }
 
   @override
@@ -828,7 +1018,9 @@ class _$PostStateImpl implements _PostState {
             (identical(other.isPostTextEmpty, isPostTextEmpty) ||
                 other.isPostTextEmpty == isPostTextEmpty) &&
             (identical(other.postTextController, postTextController) ||
-                other.postTextController == postTextController));
+                other.postTextController == postTextController) &&
+            (identical(other.isImageEmpty, isImageEmpty) ||
+                other.isImageEmpty == isImageEmpty));
   }
 
   @override
@@ -841,7 +1033,8 @@ class _$PostStateImpl implements _PostState {
       isTwitterSelected,
       isLinkedinSelected,
       isPostTextEmpty,
-      postTextController);
+      postTextController,
+      isImageEmpty);
 
   /// Create a copy of PostState
   /// with the given fields replaced by the non-null parameter values.
@@ -854,15 +1047,15 @@ class _$PostStateImpl implements _PostState {
 
 abstract class _PostState implements PostState {
   const factory _PostState(
-          {required final Set<int> selectedIndex,
-          final XFile? image,
-          final bool? isInstagramSelected,
-          final bool? isFacebookSelected,
-          final bool? isTwitterSelected,
-          final bool? isLinkedinSelected,
-          required final bool isPostTextEmpty,
-          required final TextEditingController postTextController}) =
-      _$PostStateImpl;
+      {required final Set<int> selectedIndex,
+      final XFile? image,
+      final bool? isInstagramSelected,
+      final bool? isFacebookSelected,
+      final bool? isTwitterSelected,
+      final bool? isLinkedinSelected,
+      required final bool isPostTextEmpty,
+      required final TextEditingController postTextController,
+      required final bool isImageEmpty}) = _$PostStateImpl;
 
   @override
   Set<int> get selectedIndex;
@@ -880,6 +1073,8 @@ abstract class _PostState implements PostState {
   bool get isPostTextEmpty;
   @override
   TextEditingController get postTextController;
+  @override
+  bool get isImageEmpty;
 
   /// Create a copy of PostState
   /// with the given fields replaced by the non-null parameter values.

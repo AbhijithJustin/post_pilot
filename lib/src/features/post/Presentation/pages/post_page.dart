@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:post_pilot/src/core/utils/constants/app_colors.dart';
 import 'package:post_pilot/src/core/widgets/app_sized_box.dart';
 import 'package:post_pilot/src/features/post/Presentation/bloc/post_bloc.dart';
@@ -31,7 +30,11 @@ class PostPage extends StatelessWidget {
                 builder: (context, state) {
                   return ListView(
                     children: [
-                      UploadImage(size: size),
+                      UploadImage(
+                        size: size,
+                        color:
+                            state.isImageEmpty ? Colors.red : AppColors.primary,
+                      ),
                       AppSizedBox.hMedium,
                       Column(
                         children: [
@@ -63,10 +66,14 @@ class PostPage extends StatelessWidget {
                       SocialMediaGrid(),
                       AppSizedBox.hMedium,
                       ElevatedButton(
-                        onPressed: () {
+                        onPressed: () async {
                           // Navigator.pop(context);
 
                           context.read<PostBloc>().add(UpdatePostText());
+
+                          context
+                              .read<PostBloc>()
+                              .add(UploadImageToOrchestrator());
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.primary,

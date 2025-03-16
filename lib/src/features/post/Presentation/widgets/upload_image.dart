@@ -11,9 +11,11 @@ class UploadImage extends StatelessWidget {
   const UploadImage({
     super.key,
     required this.size,
+    required this.color,
   });
 
   final Size size;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +43,7 @@ class UploadImage extends StatelessWidget {
                       width: 5,
                       dashSize: 9,
                       dashSpacing: 9,
-                      color: AppColors.primary,
+                      color: color,
                       borderRadius: BorderRadius.circular(40),
                     )
                   : RoundedRectangleBorder(
@@ -58,13 +60,13 @@ class UploadImage extends StatelessWidget {
                       Icon(
                         Icons.add_photo_alternate,
                         size: 100,
-                        color: AppColors.primary,
+                        color: color,
                       ),
                       Text(
                         "Select a Image to upload",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: AppColors.primary,
+                            color: color,
                             fontSize: 20),
                       ),
                     ],

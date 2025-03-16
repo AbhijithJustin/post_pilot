@@ -6,4 +6,6 @@ class PostEvent with _$PostEvent {
   const factory PostEvent.uploadPhoto() = UploadPhoto;
   const factory PostEvent.postTextNotifier() = PostTextNotifier;
   const factory PostEvent.updatePostText() = UpdatePostText;
+  const factory PostEvent.uploadImageToOrchestrator() =
+      UploadImageToOrchestrator;
 }

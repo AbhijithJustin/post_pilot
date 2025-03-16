@@ -2,14 +2,14 @@ import 'dart:convert';
 
 import 'package:post_pilot/src/core/utils/constants/app_uipath_data.dart';
 
-class UpdateAssetsImageModel {
+class UpdateAssetsTextModel {
   String? name;
   String? valueScope;
   String? valueType;
   String? stringValue;
   int? id;
 
-  UpdateAssetsImageModel({
+  UpdateAssetsTextModel({
     this.name = 'PostText',
     this.valueScope = 'Global',
     this.valueType = 'Text',
@@ -17,8 +17,8 @@ class UpdateAssetsImageModel {
     this.id = AppUipathData.assetPostTextId,
   });
 
-  factory UpdateAssetsImageModel.fromMap(Map<String, dynamic> data) {
-    return UpdateAssetsImageModel(
+  factory UpdateAssetsTextModel.fromMap(Map<String, dynamic> data) {
+    return UpdateAssetsTextModel(
       name: data['Name'] as String?,
       valueScope: data['ValueScope'] as String?,
       valueType: data['ValueType'] as String?,
@@ -37,6 +37,6 @@ class UpdateAssetsImageModel {
 
   /// `dart:convert`
   ///
-  /// Converts [UpdateAssetsImageModel] to a JSON string.
+  /// Converts [UpdateAssetsTextModel] to a JSON string.
   String toJson() => json.encode(toMap());
 }
