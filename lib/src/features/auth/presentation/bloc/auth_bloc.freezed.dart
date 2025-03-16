@@ -21,6 +21,7 @@ mixin _$AuthEvent {
     required TResult Function() showLoginPassword,
     required TResult Function() showRegisterPassword,
     required TResult Function() showConformPassword,
+    required TResult Function() tokenSaveToSharedPreferences,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$AuthEvent {
     TResult? Function()? showLoginPassword,
     TResult? Function()? showRegisterPassword,
     TResult? Function()? showConformPassword,
+    TResult? Function()? tokenSaveToSharedPreferences,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$AuthEvent {
     TResult Function()? showLoginPassword,
     TResult Function()? showRegisterPassword,
     TResult Function()? showConformPassword,
+    TResult Function()? tokenSaveToSharedPreferences,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,8 @@ mixin _$AuthEvent {
     required TResult Function(ShowLoginPassword value) showLoginPassword,
     required TResult Function(ShowRegisterPassword value) showRegisterPassword,
     required TResult Function(ShowConformPassword value) showConformPassword,
+    required TResult Function(TokenSaveToSharedPreferences value)
+        tokenSaveToSharedPreferences,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +55,8 @@ mixin _$AuthEvent {
     TResult? Function(ShowLoginPassword value)? showLoginPassword,
     TResult? Function(ShowRegisterPassword value)? showRegisterPassword,
     TResult? Function(ShowConformPassword value)? showConformPassword,
+    TResult? Function(TokenSaveToSharedPreferences value)?
+        tokenSaveToSharedPreferences,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +64,8 @@ mixin _$AuthEvent {
     TResult Function(ShowLoginPassword value)? showLoginPassword,
     TResult Function(ShowRegisterPassword value)? showRegisterPassword,
     TResult Function(ShowConformPassword value)? showConformPassword,
+    TResult Function(TokenSaveToSharedPreferences value)?
+        tokenSaveToSharedPreferences,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +143,7 @@ class _$ShowLoginPasswordImpl
     required TResult Function() showLoginPassword,
     required TResult Function() showRegisterPassword,
     required TResult Function() showConformPassword,
+    required TResult Function() tokenSaveToSharedPreferences,
   }) {
     return showLoginPassword();
   }
@@ -144,6 +154,7 @@ class _$ShowLoginPasswordImpl
     TResult? Function()? showLoginPassword,
     TResult? Function()? showRegisterPassword,
     TResult? Function()? showConformPassword,
+    TResult? Function()? tokenSaveToSharedPreferences,
   }) {
     return showLoginPassword?.call();
   }
@@ -154,6 +165,7 @@ class _$ShowLoginPasswordImpl
     TResult Function()? showLoginPassword,
     TResult Function()? showRegisterPassword,
     TResult Function()? showConformPassword,
+    TResult Function()? tokenSaveToSharedPreferences,
     required TResult orElse(),
   }) {
     if (showLoginPassword != null) {
@@ -168,6 +180,8 @@ class _$ShowLoginPasswordImpl
     required TResult Function(ShowLoginPassword value) showLoginPassword,
     required TResult Function(ShowRegisterPassword value) showRegisterPassword,
     required TResult Function(ShowConformPassword value) showConformPassword,
+    required TResult Function(TokenSaveToSharedPreferences value)
+        tokenSaveToSharedPreferences,
   }) {
     return showLoginPassword(this);
   }
@@ -178,6 +192,8 @@ class _$ShowLoginPasswordImpl
     TResult? Function(ShowLoginPassword value)? showLoginPassword,
     TResult? Function(ShowRegisterPassword value)? showRegisterPassword,
     TResult? Function(ShowConformPassword value)? showConformPassword,
+    TResult? Function(TokenSaveToSharedPreferences value)?
+        tokenSaveToSharedPreferences,
   }) {
     return showLoginPassword?.call(this);
   }
@@ -188,6 +204,8 @@ class _$ShowLoginPasswordImpl
     TResult Function(ShowLoginPassword value)? showLoginPassword,
     TResult Function(ShowRegisterPassword value)? showRegisterPassword,
     TResult Function(ShowConformPassword value)? showConformPassword,
+    TResult Function(TokenSaveToSharedPreferences value)?
+        tokenSaveToSharedPreferences,
     required TResult orElse(),
   }) {
     if (showLoginPassword != null) {
@@ -255,6 +273,7 @@ class _$ShowRegisterPasswordImpl
     required TResult Function() showLoginPassword,
     required TResult Function() showRegisterPassword,
     required TResult Function() showConformPassword,
+    required TResult Function() tokenSaveToSharedPreferences,
   }) {
     return showRegisterPassword();
   }
@@ -265,6 +284,7 @@ class _$ShowRegisterPasswordImpl
     TResult? Function()? showLoginPassword,
     TResult? Function()? showRegisterPassword,
     TResult? Function()? showConformPassword,
+    TResult? Function()? tokenSaveToSharedPreferences,
   }) {
     return showRegisterPassword?.call();
   }
@@ -275,6 +295,7 @@ class _$ShowRegisterPasswordImpl
     TResult Function()? showLoginPassword,
     TResult Function()? showRegisterPassword,
     TResult Function()? showConformPassword,
+    TResult Function()? tokenSaveToSharedPreferences,
     required TResult orElse(),
   }) {
     if (showRegisterPassword != null) {
@@ -289,6 +310,8 @@ class _$ShowRegisterPasswordImpl
     required TResult Function(ShowLoginPassword value) showLoginPassword,
     required TResult Function(ShowRegisterPassword value) showRegisterPassword,
     required TResult Function(ShowConformPassword value) showConformPassword,
+    required TResult Function(TokenSaveToSharedPreferences value)
+        tokenSaveToSharedPreferences,
   }) {
     return showRegisterPassword(this);
   }
@@ -299,6 +322,8 @@ class _$ShowRegisterPasswordImpl
     TResult? Function(ShowLoginPassword value)? showLoginPassword,
     TResult? Function(ShowRegisterPassword value)? showRegisterPassword,
     TResult? Function(ShowConformPassword value)? showConformPassword,
+    TResult? Function(TokenSaveToSharedPreferences value)?
+        tokenSaveToSharedPreferences,
   }) {
     return showRegisterPassword?.call(this);
   }
@@ -309,6 +334,8 @@ class _$ShowRegisterPasswordImpl
     TResult Function(ShowLoginPassword value)? showLoginPassword,
     TResult Function(ShowRegisterPassword value)? showRegisterPassword,
     TResult Function(ShowConformPassword value)? showConformPassword,
+    TResult Function(TokenSaveToSharedPreferences value)?
+        tokenSaveToSharedPreferences,
     required TResult orElse(),
   }) {
     if (showRegisterPassword != null) {
@@ -376,6 +403,7 @@ class _$ShowConformPasswordImpl
     required TResult Function() showLoginPassword,
     required TResult Function() showRegisterPassword,
     required TResult Function() showConformPassword,
+    required TResult Function() tokenSaveToSharedPreferences,
   }) {
     return showConformPassword();
   }
@@ -386,6 +414,7 @@ class _$ShowConformPasswordImpl
     TResult? Function()? showLoginPassword,
     TResult? Function()? showRegisterPassword,
     TResult? Function()? showConformPassword,
+    TResult? Function()? tokenSaveToSharedPreferences,
   }) {
     return showConformPassword?.call();
   }
@@ -396,6 +425,7 @@ class _$ShowConformPasswordImpl
     TResult Function()? showLoginPassword,
     TResult Function()? showRegisterPassword,
     TResult Function()? showConformPassword,
+    TResult Function()? tokenSaveToSharedPreferences,
     required TResult orElse(),
   }) {
     if (showConformPassword != null) {
@@ -410,6 +440,8 @@ class _$ShowConformPasswordImpl
     required TResult Function(ShowLoginPassword value) showLoginPassword,
     required TResult Function(ShowRegisterPassword value) showRegisterPassword,
     required TResult Function(ShowConformPassword value) showConformPassword,
+    required TResult Function(TokenSaveToSharedPreferences value)
+        tokenSaveToSharedPreferences,
   }) {
     return showConformPassword(this);
   }
@@ -420,6 +452,8 @@ class _$ShowConformPasswordImpl
     TResult? Function(ShowLoginPassword value)? showLoginPassword,
     TResult? Function(ShowRegisterPassword value)? showRegisterPassword,
     TResult? Function(ShowConformPassword value)? showConformPassword,
+    TResult? Function(TokenSaveToSharedPreferences value)?
+        tokenSaveToSharedPreferences,
   }) {
     return showConformPassword?.call(this);
   }
@@ -430,6 +464,8 @@ class _$ShowConformPasswordImpl
     TResult Function(ShowLoginPassword value)? showLoginPassword,
     TResult Function(ShowRegisterPassword value)? showRegisterPassword,
     TResult Function(ShowConformPassword value)? showConformPassword,
+    TResult Function(TokenSaveToSharedPreferences value)?
+        tokenSaveToSharedPreferences,
     required TResult orElse(),
   }) {
     if (showConformPassword != null) {
@@ -444,10 +480,144 @@ abstract class ShowConformPassword implements AuthEvent {
 }
 
 /// @nodoc
+abstract class _$$TokenSaveToSharedPreferencesImplCopyWith<$Res> {
+  factory _$$TokenSaveToSharedPreferencesImplCopyWith(
+          _$TokenSaveToSharedPreferencesImpl value,
+          $Res Function(_$TokenSaveToSharedPreferencesImpl) then) =
+      __$$TokenSaveToSharedPreferencesImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$TokenSaveToSharedPreferencesImplCopyWithImpl<$Res>
+    extends _$AuthEventCopyWithImpl<$Res, _$TokenSaveToSharedPreferencesImpl>
+    implements _$$TokenSaveToSharedPreferencesImplCopyWith<$Res> {
+  __$$TokenSaveToSharedPreferencesImplCopyWithImpl(
+      _$TokenSaveToSharedPreferencesImpl _value,
+      $Res Function(_$TokenSaveToSharedPreferencesImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of AuthEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$TokenSaveToSharedPreferencesImpl
+    with DiagnosticableTreeMixin
+    implements TokenSaveToSharedPreferences {
+  const _$TokenSaveToSharedPreferencesImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'AuthEvent.tokenSaveToSharedPreferences()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty(
+          'type', 'AuthEvent.tokenSaveToSharedPreferences'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TokenSaveToSharedPreferencesImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() showLoginPassword,
+    required TResult Function() showRegisterPassword,
+    required TResult Function() showConformPassword,
+    required TResult Function() tokenSaveToSharedPreferences,
+  }) {
+    return tokenSaveToSharedPreferences();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? showLoginPassword,
+    TResult? Function()? showRegisterPassword,
+    TResult? Function()? showConformPassword,
+    TResult? Function()? tokenSaveToSharedPreferences,
+  }) {
+    return tokenSaveToSharedPreferences?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? showLoginPassword,
+    TResult Function()? showRegisterPassword,
+    TResult Function()? showConformPassword,
+    TResult Function()? tokenSaveToSharedPreferences,
+    required TResult orElse(),
+  }) {
+    if (tokenSaveToSharedPreferences != null) {
+      return tokenSaveToSharedPreferences();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(ShowLoginPassword value) showLoginPassword,
+    required TResult Function(ShowRegisterPassword value) showRegisterPassword,
+    required TResult Function(ShowConformPassword value) showConformPassword,
+    required TResult Function(TokenSaveToSharedPreferences value)
+        tokenSaveToSharedPreferences,
+  }) {
+    return tokenSaveToSharedPreferences(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(ShowLoginPassword value)? showLoginPassword,
+    TResult? Function(ShowRegisterPassword value)? showRegisterPassword,
+    TResult? Function(ShowConformPassword value)? showConformPassword,
+    TResult? Function(TokenSaveToSharedPreferences value)?
+        tokenSaveToSharedPreferences,
+  }) {
+    return tokenSaveToSharedPreferences?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(ShowLoginPassword value)? showLoginPassword,
+    TResult Function(ShowRegisterPassword value)? showRegisterPassword,
+    TResult Function(ShowConformPassword value)? showConformPassword,
+    TResult Function(TokenSaveToSharedPreferences value)?
+        tokenSaveToSharedPreferences,
+    required TResult orElse(),
+  }) {
+    if (tokenSaveToSharedPreferences != null) {
+      return tokenSaveToSharedPreferences(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class TokenSaveToSharedPreferences implements AuthEvent {
+  const factory TokenSaveToSharedPreferences() =
+      _$TokenSaveToSharedPreferencesImpl;
+}
+
+/// @nodoc
 mixin _$AuthState {
-  dynamic get showPassword => throw _privateConstructorUsedError;
-  dynamic get showRegisterPassword => throw _privateConstructorUsedError;
-  dynamic get showConformPassword => throw _privateConstructorUsedError;
+  bool get showPassword => throw _privateConstructorUsedError;
+  bool get showRegisterPassword => throw _privateConstructorUsedError;
+  bool get showConformPassword => throw _privateConstructorUsedError;
 
   /// Create a copy of AuthState
   /// with the given fields replaced by the non-null parameter values.
@@ -462,9 +632,7 @@ abstract class $AuthStateCopyWith<$Res> {
       _$AuthStateCopyWithImpl<$Res, AuthState>;
   @useResult
   $Res call(
-      {dynamic showPassword,
-      dynamic showRegisterPassword,
-      dynamic showConformPassword});
+      {bool showPassword, bool showRegisterPassword, bool showConformPassword});
 }
 
 /// @nodoc
@@ -482,23 +650,23 @@ class _$AuthStateCopyWithImpl<$Res, $Val extends AuthState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? showPassword = freezed,
-    Object? showRegisterPassword = freezed,
-    Object? showConformPassword = freezed,
+    Object? showPassword = null,
+    Object? showRegisterPassword = null,
+    Object? showConformPassword = null,
   }) {
     return _then(_value.copyWith(
-      showPassword: freezed == showPassword
+      showPassword: null == showPassword
           ? _value.showPassword
           : showPassword // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      showRegisterPassword: freezed == showRegisterPassword
+              as bool,
+      showRegisterPassword: null == showRegisterPassword
           ? _value.showRegisterPassword
           : showRegisterPassword // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      showConformPassword: freezed == showConformPassword
+              as bool,
+      showConformPassword: null == showConformPassword
           ? _value.showConformPassword
           : showConformPassword // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as bool,
     ) as $Val);
   }
 }
@@ -512,9 +680,7 @@ abstract class _$$AuthStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {dynamic showPassword,
-      dynamic showRegisterPassword,
-      dynamic showConformPassword});
+      {bool showPassword, bool showRegisterPassword, bool showConformPassword});
 }
 
 /// @nodoc
@@ -530,19 +696,23 @@ class __$$AuthStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? showPassword = freezed,
-    Object? showRegisterPassword = freezed,
-    Object? showConformPassword = freezed,
+    Object? showPassword = null,
+    Object? showRegisterPassword = null,
+    Object? showConformPassword = null,
   }) {
     return _then(_$AuthStateImpl(
-      showPassword:
-          freezed == showPassword ? _value.showPassword! : showPassword,
-      showRegisterPassword: freezed == showRegisterPassword
-          ? _value.showRegisterPassword!
-          : showRegisterPassword,
-      showConformPassword: freezed == showConformPassword
-          ? _value.showConformPassword!
-          : showConformPassword,
+      showPassword: null == showPassword
+          ? _value.showPassword
+          : showPassword // ignore: cast_nullable_to_non_nullable
+              as bool,
+      showRegisterPassword: null == showRegisterPassword
+          ? _value.showRegisterPassword
+          : showRegisterPassword // ignore: cast_nullable_to_non_nullable
+              as bool,
+      showConformPassword: null == showConformPassword
+          ? _value.showConformPassword
+          : showConformPassword // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -551,14 +721,16 @@ class __$$AuthStateImplCopyWithImpl<$Res>
 
 class _$AuthStateImpl with DiagnosticableTreeMixin implements _AuthState {
   _$AuthStateImpl(
-      {this.showPassword, this.showRegisterPassword, this.showConformPassword});
+      {required this.showPassword,
+      required this.showRegisterPassword,
+      required this.showConformPassword});
 
   @override
-  final dynamic showPassword;
+  final bool showPassword;
   @override
-  final dynamic showRegisterPassword;
+  final bool showRegisterPassword;
   @override
-  final dynamic showConformPassword;
+  final bool showConformPassword;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -580,20 +752,17 @@ class _$AuthStateImpl with DiagnosticableTreeMixin implements _AuthState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AuthStateImpl &&
-            const DeepCollectionEquality()
-                .equals(other.showPassword, showPassword) &&
-            const DeepCollectionEquality()
-                .equals(other.showRegisterPassword, showRegisterPassword) &&
-            const DeepCollectionEquality()
-                .equals(other.showConformPassword, showConformPassword));
+            (identical(other.showPassword, showPassword) ||
+                other.showPassword == showPassword) &&
+            (identical(other.showRegisterPassword, showRegisterPassword) ||
+                other.showRegisterPassword == showRegisterPassword) &&
+            (identical(other.showConformPassword, showConformPassword) ||
+                other.showConformPassword == showConformPassword));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(showPassword),
-      const DeepCollectionEquality().hash(showRegisterPassword),
-      const DeepCollectionEquality().hash(showConformPassword));
+      runtimeType, showPassword, showRegisterPassword, showConformPassword);
 
   /// Create a copy of AuthState
   /// with the given fields replaced by the non-null parameter values.
@@ -606,16 +775,16 @@ class _$AuthStateImpl with DiagnosticableTreeMixin implements _AuthState {
 
 abstract class _AuthState implements AuthState {
   factory _AuthState(
-      {final dynamic showPassword,
-      final dynamic showRegisterPassword,
-      final dynamic showConformPassword}) = _$AuthStateImpl;
+      {required final bool showPassword,
+      required final bool showRegisterPassword,
+      required final bool showConformPassword}) = _$AuthStateImpl;
 
   @override
-  dynamic get showPassword;
+  bool get showPassword;
   @override
-  dynamic get showRegisterPassword;
+  bool get showRegisterPassword;
   @override
-  dynamic get showConformPassword;
+  bool get showConformPassword;
 
   /// Create a copy of AuthState
   /// with the given fields replaced by the non-null parameter values.

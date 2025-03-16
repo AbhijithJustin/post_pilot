@@ -48,9 +48,9 @@ class PostBloc extends Bloc<PostEvent, PostState> {
       emit(state.copyWith(selectedIndex: newSelectedIndices));
     });
     on<UploadPhoto>((event, emit) async {
-      final ImagePicker _ImagePicker = ImagePicker();
+      final ImagePicker imagePicker = ImagePicker();
       emit(state.copyWith(
-          image: await _ImagePicker.pickImage(source: ImageSource.gallery)));
+          image: await imagePicker.pickImage(source: ImageSource.gallery)));
     });
   }
 }

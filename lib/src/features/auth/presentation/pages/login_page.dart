@@ -9,8 +9,15 @@ class LoginPage extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
+  LoginPage({super.key});
+
   @override
   Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      BlocProvider.of<AuthBloc>(context)
+          .add(AuthEvent.tokenSaveToSharedPreferences());
+    });
+
     return Scaffold(
       body: SafeArea(
         child: Padding(
@@ -90,10 +97,10 @@ class LoginPage extends StatelessWidget {
               Hero(
                 tag: "button1",
                 child: ElevatedButton(
-                  onPressed: () {
+                  onPressed: () async {
                     if (_emailController.text == "myapp@gmail.com" &&
                         _passwordController.text == "Myapp@123") {
-                      Navigator.pushNamed(context, '/home');
+                      Navigator.pushReplacementNamed(context, '/home');
                     }
                     Navigator.pushNamed(context, '/home');
                   },

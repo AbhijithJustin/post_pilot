@@ -46,6 +46,9 @@ dependencies:
   widgets_easier: ^0.0.10
   icons_plus: ^5.0.0
   image_picker: ^1.1.2
+  dio: ^5.8.0+1
+  logger: ^2.5.0
+  shared_preferences: ^2.5.2
 
 
 dev_dependencies:

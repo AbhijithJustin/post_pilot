@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:post_pilot/src/core/utils/constants/app_colors.dart';
 import 'package:post_pilot/src/features/home/presentation/widgets/bots.dart';
 import 'package:post_pilot/src/features/home/presentation/widgets/home.dart';
-import 'package:post_pilot/src/features/home/presentation/widgets/jobs.dart';
 import 'package:post_pilot/src/features/home/presentation/widgets/machines.dart';
+import 'package:post_pilot/src/features/jobs/presentation/pages/jobs_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
     Icons.smart_toy,
     Icons.precision_manufacturing,
   ];
-  final _screenList = <Widget>[Home(), Jobs(), Bots(), Machines()];
+  final _screenList = <Widget>[Home(), JobsPage(), Bots(), Machines()];
 
   @override
   Widget build(BuildContext context) {
@@ -30,11 +30,11 @@ class _HomePageState extends State<HomePage> {
       body: _screenList[_bottomNavIndex],
       floatingActionButton: FloatingActionButton(
         shape: CircleBorder(),
+        backgroundColor: AppColors.secondary,
         child: Icon(
           Icons.add,
           color: AppColors.background,
         ),
-        backgroundColor: AppColors.secondary,
         onPressed: () {
           Navigator.pushNamed(context, '/post');
         },
