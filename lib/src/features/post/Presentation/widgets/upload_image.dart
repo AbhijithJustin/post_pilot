@@ -22,7 +22,6 @@ class UploadImage extends StatelessWidget {
         return InkWell(
           onTap: () {
             context.read<PostBloc>().add(PostEvent.uploadPhoto());
-            print("Upload Image");
           },
           borderRadius: BorderRadius.circular(40),
           splashColor: AppColors.primary.withAlpha(50),

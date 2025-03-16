@@ -10,8 +10,7 @@ import 'package:post_pilot/src/features/post/Presentation/widgets/social_medea_g
 import '../widgets/upload_image.dart';
 
 class PostPage extends StatelessWidget {
-  PostPage({super.key});
-  final TextEditingController postTextFieldController = TextEditingController();
+  const PostPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,35 +27,64 @@ class PostPage extends StatelessWidget {
                 const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
             child: SizedBox(
               width: double.infinity,
-              child: ListView(
-                children: [
-                  UploadImage(size: size),
-                  AppSizedBox.hMedium,
-                  PostTextField(
-                    postTextController: postTextFieldController,
-                  ),
-                  AppSizedBox.hMedium,
-                  SocialMediaGrid(),
-                  AppSizedBox.hMedium,
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: AppColors.primary,
-                      minimumSize: Size(double.infinity, 50),
-                    ),
-                    child: Text(
-                      'Post',
-                      style: TextStyle(
-                        color: AppColors.background,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+              child: BlocBuilder<PostBloc, PostState>(
+                builder: (context, state) {
+                  return ListView(
+                    children: [
+                      UploadImage(size: size),
+                      AppSizedBox.hMedium,
+                      Column(
+                        children: [
+                          Visibility(
+                            visible: state.isPostTextEmpty,
+                            child: Text(
+                              'Place Enter Your Post Description',
+                              style: TextStyle(
+                                color: Colors.red,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          PostTextField(
+                            onChanged: (value) {
+                              context
+                                  .read<PostBloc>()
+                                  .add(PostEvent.postTextNotifier());
+                            },
+                            postTextController: state.postTextController,
+                            color: state.isPostTextEmpty
+                                ? Colors.red
+                                : AppColors.primary,
+                          ),
+                        ],
                       ),
-                    ),
-                  ),
-                  AppSizedBox.hMedium
-                ],
+                      AppSizedBox.hMedium,
+                      SocialMediaGrid(),
+                      AppSizedBox.hMedium,
+                      ElevatedButton(
+                        onPressed: () {
+                          // Navigator.pop(context);
+
+                          context.read<PostBloc>().add(UpdatePostText());
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: AppColors.primary,
+                          minimumSize: Size(double.infinity, 50),
+                        ),
+                        child: Text(
+                          'Post',
+                          style: TextStyle(
+                            color: AppColors.background,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      AppSizedBox.hMedium
+                    ],
+                  );
+                },
               ),
             ),
           ),

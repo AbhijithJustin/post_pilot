@@ -9,6 +9,8 @@ class PostState with _$PostState {
     bool? isFacebookSelected,
     bool? isTwitterSelected,
     bool? isLinkedinSelected,
+    required bool isPostTextEmpty,
+    required TextEditingController postTextController,
   }) = _PostState;
 
   factory PostState.initial() => PostState(
@@ -18,5 +20,7 @@ class PostState with _$PostState {
         isFacebookSelected: false,
         isTwitterSelected: false,
         isLinkedinSelected: false,
+        isPostTextEmpty: false,
+        postTextController: TextEditingController(text: ''),
       );
 }
