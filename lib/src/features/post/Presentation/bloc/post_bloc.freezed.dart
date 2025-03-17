@@ -23,6 +23,9 @@ mixin _$PostEvent {
     required TResult Function() postTextNotifier,
     required TResult Function() updatePostText,
     required TResult Function() uploadImageToOrchestrator,
+    required TResult Function() startAutomation,
+    required TResult Function() socialMediaSelectorNotifier,
+    required TResult Function(bool value) slideButtonAction,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -32,6 +35,9 @@ mixin _$PostEvent {
     TResult? Function()? postTextNotifier,
     TResult? Function()? updatePostText,
     TResult? Function()? uploadImageToOrchestrator,
+    TResult? Function()? startAutomation,
+    TResult? Function()? socialMediaSelectorNotifier,
+    TResult? Function(bool value)? slideButtonAction,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,6 +47,9 @@ mixin _$PostEvent {
     TResult Function()? postTextNotifier,
     TResult Function()? updatePostText,
     TResult Function()? uploadImageToOrchestrator,
+    TResult Function()? startAutomation,
+    TResult Function()? socialMediaSelectorNotifier,
+    TResult Function(bool value)? slideButtonAction,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -52,6 +61,10 @@ mixin _$PostEvent {
     required TResult Function(UpdatePostText value) updatePostText,
     required TResult Function(UploadImageToOrchestrator value)
         uploadImageToOrchestrator,
+    required TResult Function(StartAutomation value) startAutomation,
+    required TResult Function(SocialMediaSelectorNotifier value)
+        socialMediaSelectorNotifier,
+    required TResult Function(SlideButtonAction value) slideButtonAction,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,6 +75,10 @@ mixin _$PostEvent {
     TResult? Function(UpdatePostText value)? updatePostText,
     TResult? Function(UploadImageToOrchestrator value)?
         uploadImageToOrchestrator,
+    TResult? Function(StartAutomation value)? startAutomation,
+    TResult? Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult? Function(SlideButtonAction value)? slideButtonAction,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,6 +89,10 @@ mixin _$PostEvent {
     TResult Function(UpdatePostText value)? updatePostText,
     TResult Function(UploadImageToOrchestrator value)?
         uploadImageToOrchestrator,
+    TResult Function(StartAutomation value)? startAutomation,
+    TResult Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult Function(SlideButtonAction value)? slideButtonAction,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -171,6 +192,9 @@ class _$SocialMediaSelectorImpl implements SocialMediaSelector {
     required TResult Function() postTextNotifier,
     required TResult Function() updatePostText,
     required TResult Function() uploadImageToOrchestrator,
+    required TResult Function() startAutomation,
+    required TResult Function() socialMediaSelectorNotifier,
+    required TResult Function(bool value) slideButtonAction,
   }) {
     return socialMediaSelector(index);
   }
@@ -183,6 +207,9 @@ class _$SocialMediaSelectorImpl implements SocialMediaSelector {
     TResult? Function()? postTextNotifier,
     TResult? Function()? updatePostText,
     TResult? Function()? uploadImageToOrchestrator,
+    TResult? Function()? startAutomation,
+    TResult? Function()? socialMediaSelectorNotifier,
+    TResult? Function(bool value)? slideButtonAction,
   }) {
     return socialMediaSelector?.call(index);
   }
@@ -195,6 +222,9 @@ class _$SocialMediaSelectorImpl implements SocialMediaSelector {
     TResult Function()? postTextNotifier,
     TResult Function()? updatePostText,
     TResult Function()? uploadImageToOrchestrator,
+    TResult Function()? startAutomation,
+    TResult Function()? socialMediaSelectorNotifier,
+    TResult Function(bool value)? slideButtonAction,
     required TResult orElse(),
   }) {
     if (socialMediaSelector != null) {
@@ -212,6 +242,10 @@ class _$SocialMediaSelectorImpl implements SocialMediaSelector {
     required TResult Function(UpdatePostText value) updatePostText,
     required TResult Function(UploadImageToOrchestrator value)
         uploadImageToOrchestrator,
+    required TResult Function(StartAutomation value) startAutomation,
+    required TResult Function(SocialMediaSelectorNotifier value)
+        socialMediaSelectorNotifier,
+    required TResult Function(SlideButtonAction value) slideButtonAction,
   }) {
     return socialMediaSelector(this);
   }
@@ -225,6 +259,10 @@ class _$SocialMediaSelectorImpl implements SocialMediaSelector {
     TResult? Function(UpdatePostText value)? updatePostText,
     TResult? Function(UploadImageToOrchestrator value)?
         uploadImageToOrchestrator,
+    TResult? Function(StartAutomation value)? startAutomation,
+    TResult? Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult? Function(SlideButtonAction value)? slideButtonAction,
   }) {
     return socialMediaSelector?.call(this);
   }
@@ -238,6 +276,10 @@ class _$SocialMediaSelectorImpl implements SocialMediaSelector {
     TResult Function(UpdatePostText value)? updatePostText,
     TResult Function(UploadImageToOrchestrator value)?
         uploadImageToOrchestrator,
+    TResult Function(StartAutomation value)? startAutomation,
+    TResult Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult Function(SlideButtonAction value)? slideButtonAction,
     required TResult orElse(),
   }) {
     if (socialMediaSelector != null) {
@@ -306,6 +348,9 @@ class _$UploadPhotoImpl implements UploadPhoto {
     required TResult Function() postTextNotifier,
     required TResult Function() updatePostText,
     required TResult Function() uploadImageToOrchestrator,
+    required TResult Function() startAutomation,
+    required TResult Function() socialMediaSelectorNotifier,
+    required TResult Function(bool value) slideButtonAction,
   }) {
     return uploadPhoto();
   }
@@ -318,6 +363,9 @@ class _$UploadPhotoImpl implements UploadPhoto {
     TResult? Function()? postTextNotifier,
     TResult? Function()? updatePostText,
     TResult? Function()? uploadImageToOrchestrator,
+    TResult? Function()? startAutomation,
+    TResult? Function()? socialMediaSelectorNotifier,
+    TResult? Function(bool value)? slideButtonAction,
   }) {
     return uploadPhoto?.call();
   }
@@ -330,6 +378,9 @@ class _$UploadPhotoImpl implements UploadPhoto {
     TResult Function()? postTextNotifier,
     TResult Function()? updatePostText,
     TResult Function()? uploadImageToOrchestrator,
+    TResult Function()? startAutomation,
+    TResult Function()? socialMediaSelectorNotifier,
+    TResult Function(bool value)? slideButtonAction,
     required TResult orElse(),
   }) {
     if (uploadPhoto != null) {
@@ -347,6 +398,10 @@ class _$UploadPhotoImpl implements UploadPhoto {
     required TResult Function(UpdatePostText value) updatePostText,
     required TResult Function(UploadImageToOrchestrator value)
         uploadImageToOrchestrator,
+    required TResult Function(StartAutomation value) startAutomation,
+    required TResult Function(SocialMediaSelectorNotifier value)
+        socialMediaSelectorNotifier,
+    required TResult Function(SlideButtonAction value) slideButtonAction,
   }) {
     return uploadPhoto(this);
   }
@@ -360,6 +415,10 @@ class _$UploadPhotoImpl implements UploadPhoto {
     TResult? Function(UpdatePostText value)? updatePostText,
     TResult? Function(UploadImageToOrchestrator value)?
         uploadImageToOrchestrator,
+    TResult? Function(StartAutomation value)? startAutomation,
+    TResult? Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult? Function(SlideButtonAction value)? slideButtonAction,
   }) {
     return uploadPhoto?.call(this);
   }
@@ -373,6 +432,10 @@ class _$UploadPhotoImpl implements UploadPhoto {
     TResult Function(UpdatePostText value)? updatePostText,
     TResult Function(UploadImageToOrchestrator value)?
         uploadImageToOrchestrator,
+    TResult Function(StartAutomation value)? startAutomation,
+    TResult Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult Function(SlideButtonAction value)? slideButtonAction,
     required TResult orElse(),
   }) {
     if (uploadPhoto != null) {
@@ -432,6 +495,9 @@ class _$PostTextNotifierImpl implements PostTextNotifier {
     required TResult Function() postTextNotifier,
     required TResult Function() updatePostText,
     required TResult Function() uploadImageToOrchestrator,
+    required TResult Function() startAutomation,
+    required TResult Function() socialMediaSelectorNotifier,
+    required TResult Function(bool value) slideButtonAction,
   }) {
     return postTextNotifier();
   }
@@ -444,6 +510,9 @@ class _$PostTextNotifierImpl implements PostTextNotifier {
     TResult? Function()? postTextNotifier,
     TResult? Function()? updatePostText,
     TResult? Function()? uploadImageToOrchestrator,
+    TResult? Function()? startAutomation,
+    TResult? Function()? socialMediaSelectorNotifier,
+    TResult? Function(bool value)? slideButtonAction,
   }) {
     return postTextNotifier?.call();
   }
@@ -456,6 +525,9 @@ class _$PostTextNotifierImpl implements PostTextNotifier {
     TResult Function()? postTextNotifier,
     TResult Function()? updatePostText,
     TResult Function()? uploadImageToOrchestrator,
+    TResult Function()? startAutomation,
+    TResult Function()? socialMediaSelectorNotifier,
+    TResult Function(bool value)? slideButtonAction,
     required TResult orElse(),
   }) {
     if (postTextNotifier != null) {
@@ -473,6 +545,10 @@ class _$PostTextNotifierImpl implements PostTextNotifier {
     required TResult Function(UpdatePostText value) updatePostText,
     required TResult Function(UploadImageToOrchestrator value)
         uploadImageToOrchestrator,
+    required TResult Function(StartAutomation value) startAutomation,
+    required TResult Function(SocialMediaSelectorNotifier value)
+        socialMediaSelectorNotifier,
+    required TResult Function(SlideButtonAction value) slideButtonAction,
   }) {
     return postTextNotifier(this);
   }
@@ -486,6 +562,10 @@ class _$PostTextNotifierImpl implements PostTextNotifier {
     TResult? Function(UpdatePostText value)? updatePostText,
     TResult? Function(UploadImageToOrchestrator value)?
         uploadImageToOrchestrator,
+    TResult? Function(StartAutomation value)? startAutomation,
+    TResult? Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult? Function(SlideButtonAction value)? slideButtonAction,
   }) {
     return postTextNotifier?.call(this);
   }
@@ -499,6 +579,10 @@ class _$PostTextNotifierImpl implements PostTextNotifier {
     TResult Function(UpdatePostText value)? updatePostText,
     TResult Function(UploadImageToOrchestrator value)?
         uploadImageToOrchestrator,
+    TResult Function(StartAutomation value)? startAutomation,
+    TResult Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult Function(SlideButtonAction value)? slideButtonAction,
     required TResult orElse(),
   }) {
     if (postTextNotifier != null) {
@@ -558,6 +642,9 @@ class _$UpdatePostTextImpl implements UpdatePostText {
     required TResult Function() postTextNotifier,
     required TResult Function() updatePostText,
     required TResult Function() uploadImageToOrchestrator,
+    required TResult Function() startAutomation,
+    required TResult Function() socialMediaSelectorNotifier,
+    required TResult Function(bool value) slideButtonAction,
   }) {
     return updatePostText();
   }
@@ -570,6 +657,9 @@ class _$UpdatePostTextImpl implements UpdatePostText {
     TResult? Function()? postTextNotifier,
     TResult? Function()? updatePostText,
     TResult? Function()? uploadImageToOrchestrator,
+    TResult? Function()? startAutomation,
+    TResult? Function()? socialMediaSelectorNotifier,
+    TResult? Function(bool value)? slideButtonAction,
   }) {
     return updatePostText?.call();
   }
@@ -582,6 +672,9 @@ class _$UpdatePostTextImpl implements UpdatePostText {
     TResult Function()? postTextNotifier,
     TResult Function()? updatePostText,
     TResult Function()? uploadImageToOrchestrator,
+    TResult Function()? startAutomation,
+    TResult Function()? socialMediaSelectorNotifier,
+    TResult Function(bool value)? slideButtonAction,
     required TResult orElse(),
   }) {
     if (updatePostText != null) {
@@ -599,6 +692,10 @@ class _$UpdatePostTextImpl implements UpdatePostText {
     required TResult Function(UpdatePostText value) updatePostText,
     required TResult Function(UploadImageToOrchestrator value)
         uploadImageToOrchestrator,
+    required TResult Function(StartAutomation value) startAutomation,
+    required TResult Function(SocialMediaSelectorNotifier value)
+        socialMediaSelectorNotifier,
+    required TResult Function(SlideButtonAction value) slideButtonAction,
   }) {
     return updatePostText(this);
   }
@@ -612,6 +709,10 @@ class _$UpdatePostTextImpl implements UpdatePostText {
     TResult? Function(UpdatePostText value)? updatePostText,
     TResult? Function(UploadImageToOrchestrator value)?
         uploadImageToOrchestrator,
+    TResult? Function(StartAutomation value)? startAutomation,
+    TResult? Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult? Function(SlideButtonAction value)? slideButtonAction,
   }) {
     return updatePostText?.call(this);
   }
@@ -625,6 +726,10 @@ class _$UpdatePostTextImpl implements UpdatePostText {
     TResult Function(UpdatePostText value)? updatePostText,
     TResult Function(UploadImageToOrchestrator value)?
         uploadImageToOrchestrator,
+    TResult Function(StartAutomation value)? startAutomation,
+    TResult Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult Function(SlideButtonAction value)? slideButtonAction,
     required TResult orElse(),
   }) {
     if (updatePostText != null) {
@@ -687,6 +792,9 @@ class _$UploadImageToOrchestratorImpl implements UploadImageToOrchestrator {
     required TResult Function() postTextNotifier,
     required TResult Function() updatePostText,
     required TResult Function() uploadImageToOrchestrator,
+    required TResult Function() startAutomation,
+    required TResult Function() socialMediaSelectorNotifier,
+    required TResult Function(bool value) slideButtonAction,
   }) {
     return uploadImageToOrchestrator();
   }
@@ -699,6 +807,9 @@ class _$UploadImageToOrchestratorImpl implements UploadImageToOrchestrator {
     TResult? Function()? postTextNotifier,
     TResult? Function()? updatePostText,
     TResult? Function()? uploadImageToOrchestrator,
+    TResult? Function()? startAutomation,
+    TResult? Function()? socialMediaSelectorNotifier,
+    TResult? Function(bool value)? slideButtonAction,
   }) {
     return uploadImageToOrchestrator?.call();
   }
@@ -711,6 +822,9 @@ class _$UploadImageToOrchestratorImpl implements UploadImageToOrchestrator {
     TResult Function()? postTextNotifier,
     TResult Function()? updatePostText,
     TResult Function()? uploadImageToOrchestrator,
+    TResult Function()? startAutomation,
+    TResult Function()? socialMediaSelectorNotifier,
+    TResult Function(bool value)? slideButtonAction,
     required TResult orElse(),
   }) {
     if (uploadImageToOrchestrator != null) {
@@ -728,6 +842,10 @@ class _$UploadImageToOrchestratorImpl implements UploadImageToOrchestrator {
     required TResult Function(UpdatePostText value) updatePostText,
     required TResult Function(UploadImageToOrchestrator value)
         uploadImageToOrchestrator,
+    required TResult Function(StartAutomation value) startAutomation,
+    required TResult Function(SocialMediaSelectorNotifier value)
+        socialMediaSelectorNotifier,
+    required TResult Function(SlideButtonAction value) slideButtonAction,
   }) {
     return uploadImageToOrchestrator(this);
   }
@@ -741,6 +859,10 @@ class _$UploadImageToOrchestratorImpl implements UploadImageToOrchestrator {
     TResult? Function(UpdatePostText value)? updatePostText,
     TResult? Function(UploadImageToOrchestrator value)?
         uploadImageToOrchestrator,
+    TResult? Function(StartAutomation value)? startAutomation,
+    TResult? Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult? Function(SlideButtonAction value)? slideButtonAction,
   }) {
     return uploadImageToOrchestrator?.call(this);
   }
@@ -754,6 +876,10 @@ class _$UploadImageToOrchestratorImpl implements UploadImageToOrchestrator {
     TResult Function(UpdatePostText value)? updatePostText,
     TResult Function(UploadImageToOrchestrator value)?
         uploadImageToOrchestrator,
+    TResult Function(StartAutomation value)? startAutomation,
+    TResult Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult Function(SlideButtonAction value)? slideButtonAction,
     required TResult orElse(),
   }) {
     if (uploadImageToOrchestrator != null) {
@@ -768,6 +894,487 @@ abstract class UploadImageToOrchestrator implements PostEvent {
 }
 
 /// @nodoc
+abstract class _$$StartAutomationImplCopyWith<$Res> {
+  factory _$$StartAutomationImplCopyWith(_$StartAutomationImpl value,
+          $Res Function(_$StartAutomationImpl) then) =
+      __$$StartAutomationImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$StartAutomationImplCopyWithImpl<$Res>
+    extends _$PostEventCopyWithImpl<$Res, _$StartAutomationImpl>
+    implements _$$StartAutomationImplCopyWith<$Res> {
+  __$$StartAutomationImplCopyWithImpl(
+      _$StartAutomationImpl _value, $Res Function(_$StartAutomationImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PostEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$StartAutomationImpl implements StartAutomation {
+  const _$StartAutomationImpl();
+
+  @override
+  String toString() {
+    return 'PostEvent.startAutomation()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$StartAutomationImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) socialMediaSelector,
+    required TResult Function() uploadPhoto,
+    required TResult Function() postTextNotifier,
+    required TResult Function() updatePostText,
+    required TResult Function() uploadImageToOrchestrator,
+    required TResult Function() startAutomation,
+    required TResult Function() socialMediaSelectorNotifier,
+    required TResult Function(bool value) slideButtonAction,
+  }) {
+    return startAutomation();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? socialMediaSelector,
+    TResult? Function()? uploadPhoto,
+    TResult? Function()? postTextNotifier,
+    TResult? Function()? updatePostText,
+    TResult? Function()? uploadImageToOrchestrator,
+    TResult? Function()? startAutomation,
+    TResult? Function()? socialMediaSelectorNotifier,
+    TResult? Function(bool value)? slideButtonAction,
+  }) {
+    return startAutomation?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? socialMediaSelector,
+    TResult Function()? uploadPhoto,
+    TResult Function()? postTextNotifier,
+    TResult Function()? updatePostText,
+    TResult Function()? uploadImageToOrchestrator,
+    TResult Function()? startAutomation,
+    TResult Function()? socialMediaSelectorNotifier,
+    TResult Function(bool value)? slideButtonAction,
+    required TResult orElse(),
+  }) {
+    if (startAutomation != null) {
+      return startAutomation();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SocialMediaSelector value) socialMediaSelector,
+    required TResult Function(UploadPhoto value) uploadPhoto,
+    required TResult Function(PostTextNotifier value) postTextNotifier,
+    required TResult Function(UpdatePostText value) updatePostText,
+    required TResult Function(UploadImageToOrchestrator value)
+        uploadImageToOrchestrator,
+    required TResult Function(StartAutomation value) startAutomation,
+    required TResult Function(SocialMediaSelectorNotifier value)
+        socialMediaSelectorNotifier,
+    required TResult Function(SlideButtonAction value) slideButtonAction,
+  }) {
+    return startAutomation(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SocialMediaSelector value)? socialMediaSelector,
+    TResult? Function(UploadPhoto value)? uploadPhoto,
+    TResult? Function(PostTextNotifier value)? postTextNotifier,
+    TResult? Function(UpdatePostText value)? updatePostText,
+    TResult? Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
+    TResult? Function(StartAutomation value)? startAutomation,
+    TResult? Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult? Function(SlideButtonAction value)? slideButtonAction,
+  }) {
+    return startAutomation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SocialMediaSelector value)? socialMediaSelector,
+    TResult Function(UploadPhoto value)? uploadPhoto,
+    TResult Function(PostTextNotifier value)? postTextNotifier,
+    TResult Function(UpdatePostText value)? updatePostText,
+    TResult Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
+    TResult Function(StartAutomation value)? startAutomation,
+    TResult Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult Function(SlideButtonAction value)? slideButtonAction,
+    required TResult orElse(),
+  }) {
+    if (startAutomation != null) {
+      return startAutomation(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class StartAutomation implements PostEvent {
+  const factory StartAutomation() = _$StartAutomationImpl;
+}
+
+/// @nodoc
+abstract class _$$SocialMediaSelectorNotifierImplCopyWith<$Res> {
+  factory _$$SocialMediaSelectorNotifierImplCopyWith(
+          _$SocialMediaSelectorNotifierImpl value,
+          $Res Function(_$SocialMediaSelectorNotifierImpl) then) =
+      __$$SocialMediaSelectorNotifierImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SocialMediaSelectorNotifierImplCopyWithImpl<$Res>
+    extends _$PostEventCopyWithImpl<$Res, _$SocialMediaSelectorNotifierImpl>
+    implements _$$SocialMediaSelectorNotifierImplCopyWith<$Res> {
+  __$$SocialMediaSelectorNotifierImplCopyWithImpl(
+      _$SocialMediaSelectorNotifierImpl _value,
+      $Res Function(_$SocialMediaSelectorNotifierImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PostEvent
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$SocialMediaSelectorNotifierImpl implements SocialMediaSelectorNotifier {
+  const _$SocialMediaSelectorNotifierImpl();
+
+  @override
+  String toString() {
+    return 'PostEvent.socialMediaSelectorNotifier()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SocialMediaSelectorNotifierImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) socialMediaSelector,
+    required TResult Function() uploadPhoto,
+    required TResult Function() postTextNotifier,
+    required TResult Function() updatePostText,
+    required TResult Function() uploadImageToOrchestrator,
+    required TResult Function() startAutomation,
+    required TResult Function() socialMediaSelectorNotifier,
+    required TResult Function(bool value) slideButtonAction,
+  }) {
+    return socialMediaSelectorNotifier();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? socialMediaSelector,
+    TResult? Function()? uploadPhoto,
+    TResult? Function()? postTextNotifier,
+    TResult? Function()? updatePostText,
+    TResult? Function()? uploadImageToOrchestrator,
+    TResult? Function()? startAutomation,
+    TResult? Function()? socialMediaSelectorNotifier,
+    TResult? Function(bool value)? slideButtonAction,
+  }) {
+    return socialMediaSelectorNotifier?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? socialMediaSelector,
+    TResult Function()? uploadPhoto,
+    TResult Function()? postTextNotifier,
+    TResult Function()? updatePostText,
+    TResult Function()? uploadImageToOrchestrator,
+    TResult Function()? startAutomation,
+    TResult Function()? socialMediaSelectorNotifier,
+    TResult Function(bool value)? slideButtonAction,
+    required TResult orElse(),
+  }) {
+    if (socialMediaSelectorNotifier != null) {
+      return socialMediaSelectorNotifier();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SocialMediaSelector value) socialMediaSelector,
+    required TResult Function(UploadPhoto value) uploadPhoto,
+    required TResult Function(PostTextNotifier value) postTextNotifier,
+    required TResult Function(UpdatePostText value) updatePostText,
+    required TResult Function(UploadImageToOrchestrator value)
+        uploadImageToOrchestrator,
+    required TResult Function(StartAutomation value) startAutomation,
+    required TResult Function(SocialMediaSelectorNotifier value)
+        socialMediaSelectorNotifier,
+    required TResult Function(SlideButtonAction value) slideButtonAction,
+  }) {
+    return socialMediaSelectorNotifier(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SocialMediaSelector value)? socialMediaSelector,
+    TResult? Function(UploadPhoto value)? uploadPhoto,
+    TResult? Function(PostTextNotifier value)? postTextNotifier,
+    TResult? Function(UpdatePostText value)? updatePostText,
+    TResult? Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
+    TResult? Function(StartAutomation value)? startAutomation,
+    TResult? Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult? Function(SlideButtonAction value)? slideButtonAction,
+  }) {
+    return socialMediaSelectorNotifier?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SocialMediaSelector value)? socialMediaSelector,
+    TResult Function(UploadPhoto value)? uploadPhoto,
+    TResult Function(PostTextNotifier value)? postTextNotifier,
+    TResult Function(UpdatePostText value)? updatePostText,
+    TResult Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
+    TResult Function(StartAutomation value)? startAutomation,
+    TResult Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult Function(SlideButtonAction value)? slideButtonAction,
+    required TResult orElse(),
+  }) {
+    if (socialMediaSelectorNotifier != null) {
+      return socialMediaSelectorNotifier(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SocialMediaSelectorNotifier implements PostEvent {
+  const factory SocialMediaSelectorNotifier() =
+      _$SocialMediaSelectorNotifierImpl;
+}
+
+/// @nodoc
+abstract class _$$SlideButtonActionImplCopyWith<$Res> {
+  factory _$$SlideButtonActionImplCopyWith(_$SlideButtonActionImpl value,
+          $Res Function(_$SlideButtonActionImpl) then) =
+      __$$SlideButtonActionImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({bool value});
+}
+
+/// @nodoc
+class __$$SlideButtonActionImplCopyWithImpl<$Res>
+    extends _$PostEventCopyWithImpl<$Res, _$SlideButtonActionImpl>
+    implements _$$SlideButtonActionImplCopyWith<$Res> {
+  __$$SlideButtonActionImplCopyWithImpl(_$SlideButtonActionImpl _value,
+      $Res Function(_$SlideButtonActionImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PostEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? value = null,
+  }) {
+    return _then(_$SlideButtonActionImpl(
+      null == value
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SlideButtonActionImpl implements SlideButtonAction {
+  const _$SlideButtonActionImpl(this.value);
+
+  @override
+  final bool value;
+
+  @override
+  String toString() {
+    return 'PostEvent.slideButtonAction(value: $value)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SlideButtonActionImpl &&
+            (identical(other.value, value) || other.value == value));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, value);
+
+  /// Create a copy of PostEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SlideButtonActionImplCopyWith<_$SlideButtonActionImpl> get copyWith =>
+      __$$SlideButtonActionImplCopyWithImpl<_$SlideButtonActionImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(int index) socialMediaSelector,
+    required TResult Function() uploadPhoto,
+    required TResult Function() postTextNotifier,
+    required TResult Function() updatePostText,
+    required TResult Function() uploadImageToOrchestrator,
+    required TResult Function() startAutomation,
+    required TResult Function() socialMediaSelectorNotifier,
+    required TResult Function(bool value) slideButtonAction,
+  }) {
+    return slideButtonAction(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(int index)? socialMediaSelector,
+    TResult? Function()? uploadPhoto,
+    TResult? Function()? postTextNotifier,
+    TResult? Function()? updatePostText,
+    TResult? Function()? uploadImageToOrchestrator,
+    TResult? Function()? startAutomation,
+    TResult? Function()? socialMediaSelectorNotifier,
+    TResult? Function(bool value)? slideButtonAction,
+  }) {
+    return slideButtonAction?.call(value);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(int index)? socialMediaSelector,
+    TResult Function()? uploadPhoto,
+    TResult Function()? postTextNotifier,
+    TResult Function()? updatePostText,
+    TResult Function()? uploadImageToOrchestrator,
+    TResult Function()? startAutomation,
+    TResult Function()? socialMediaSelectorNotifier,
+    TResult Function(bool value)? slideButtonAction,
+    required TResult orElse(),
+  }) {
+    if (slideButtonAction != null) {
+      return slideButtonAction(value);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(SocialMediaSelector value) socialMediaSelector,
+    required TResult Function(UploadPhoto value) uploadPhoto,
+    required TResult Function(PostTextNotifier value) postTextNotifier,
+    required TResult Function(UpdatePostText value) updatePostText,
+    required TResult Function(UploadImageToOrchestrator value)
+        uploadImageToOrchestrator,
+    required TResult Function(StartAutomation value) startAutomation,
+    required TResult Function(SocialMediaSelectorNotifier value)
+        socialMediaSelectorNotifier,
+    required TResult Function(SlideButtonAction value) slideButtonAction,
+  }) {
+    return slideButtonAction(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(SocialMediaSelector value)? socialMediaSelector,
+    TResult? Function(UploadPhoto value)? uploadPhoto,
+    TResult? Function(PostTextNotifier value)? postTextNotifier,
+    TResult? Function(UpdatePostText value)? updatePostText,
+    TResult? Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
+    TResult? Function(StartAutomation value)? startAutomation,
+    TResult? Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult? Function(SlideButtonAction value)? slideButtonAction,
+  }) {
+    return slideButtonAction?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(SocialMediaSelector value)? socialMediaSelector,
+    TResult Function(UploadPhoto value)? uploadPhoto,
+    TResult Function(PostTextNotifier value)? postTextNotifier,
+    TResult Function(UpdatePostText value)? updatePostText,
+    TResult Function(UploadImageToOrchestrator value)?
+        uploadImageToOrchestrator,
+    TResult Function(StartAutomation value)? startAutomation,
+    TResult Function(SocialMediaSelectorNotifier value)?
+        socialMediaSelectorNotifier,
+    TResult Function(SlideButtonAction value)? slideButtonAction,
+    required TResult orElse(),
+  }) {
+    if (slideButtonAction != null) {
+      return slideButtonAction(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SlideButtonAction implements PostEvent {
+  const factory SlideButtonAction(final bool value) = _$SlideButtonActionImpl;
+
+  bool get value;
+
+  /// Create a copy of PostEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SlideButtonActionImplCopyWith<_$SlideButtonActionImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$PostState {
   Set<int> get selectedIndex => throw _privateConstructorUsedError;
   XFile? get image => throw _privateConstructorUsedError;
@@ -779,6 +1386,8 @@ mixin _$PostState {
   TextEditingController get postTextController =>
       throw _privateConstructorUsedError;
   bool get isImageEmpty => throw _privateConstructorUsedError;
+  bool get isSocialMediaSelected => throw _privateConstructorUsedError;
+  bool get isEnabledToPost => throw _privateConstructorUsedError;
 
   /// Create a copy of PostState
   /// with the given fields replaced by the non-null parameter values.
@@ -801,7 +1410,9 @@ abstract class $PostStateCopyWith<$Res> {
       bool? isLinkedinSelected,
       bool isPostTextEmpty,
       TextEditingController postTextController,
-      bool isImageEmpty});
+      bool isImageEmpty,
+      bool isSocialMediaSelected,
+      bool isEnabledToPost});
 }
 
 /// @nodoc
@@ -828,6 +1439,8 @@ class _$PostStateCopyWithImpl<$Res, $Val extends PostState>
     Object? isPostTextEmpty = null,
     Object? postTextController = null,
     Object? isImageEmpty = null,
+    Object? isSocialMediaSelected = null,
+    Object? isEnabledToPost = null,
   }) {
     return _then(_value.copyWith(
       selectedIndex: null == selectedIndex
@@ -866,6 +1479,14 @@ class _$PostStateCopyWithImpl<$Res, $Val extends PostState>
           ? _value.isImageEmpty
           : isImageEmpty // ignore: cast_nullable_to_non_nullable
               as bool,
+      isSocialMediaSelected: null == isSocialMediaSelected
+          ? _value.isSocialMediaSelected
+          : isSocialMediaSelected // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isEnabledToPost: null == isEnabledToPost
+          ? _value.isEnabledToPost
+          : isEnabledToPost // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -887,7 +1508,9 @@ abstract class _$$PostStateImplCopyWith<$Res>
       bool? isLinkedinSelected,
       bool isPostTextEmpty,
       TextEditingController postTextController,
-      bool isImageEmpty});
+      bool isImageEmpty,
+      bool isSocialMediaSelected,
+      bool isEnabledToPost});
 }
 
 /// @nodoc
@@ -912,6 +1535,8 @@ class __$$PostStateImplCopyWithImpl<$Res>
     Object? isPostTextEmpty = null,
     Object? postTextController = null,
     Object? isImageEmpty = null,
+    Object? isSocialMediaSelected = null,
+    Object? isEnabledToPost = null,
   }) {
     return _then(_$PostStateImpl(
       selectedIndex: null == selectedIndex
@@ -950,6 +1575,14 @@ class __$$PostStateImplCopyWithImpl<$Res>
           ? _value.isImageEmpty
           : isImageEmpty // ignore: cast_nullable_to_non_nullable
               as bool,
+      isSocialMediaSelected: null == isSocialMediaSelected
+          ? _value.isSocialMediaSelected
+          : isSocialMediaSelected // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isEnabledToPost: null == isEnabledToPost
+          ? _value.isEnabledToPost
+          : isEnabledToPost // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -966,7 +1599,9 @@ class _$PostStateImpl implements _PostState {
       this.isLinkedinSelected,
       required this.isPostTextEmpty,
       required this.postTextController,
-      required this.isImageEmpty})
+      required this.isImageEmpty,
+      required this.isSocialMediaSelected,
+      required this.isEnabledToPost})
       : _selectedIndex = selectedIndex;
 
   final Set<int> _selectedIndex;
@@ -993,10 +1628,14 @@ class _$PostStateImpl implements _PostState {
   final TextEditingController postTextController;
   @override
   final bool isImageEmpty;
+  @override
+  final bool isSocialMediaSelected;
+  @override
+  final bool isEnabledToPost;
 
   @override
   String toString() {
-    return 'PostState(selectedIndex: $selectedIndex, image: $image, isInstagramSelected: $isInstagramSelected, isFacebookSelected: $isFacebookSelected, isTwitterSelected: $isTwitterSelected, isLinkedinSelected: $isLinkedinSelected, isPostTextEmpty: $isPostTextEmpty, postTextController: $postTextController, isImageEmpty: $isImageEmpty)';
+    return 'PostState(selectedIndex: $selectedIndex, image: $image, isInstagramSelected: $isInstagramSelected, isFacebookSelected: $isFacebookSelected, isTwitterSelected: $isTwitterSelected, isLinkedinSelected: $isLinkedinSelected, isPostTextEmpty: $isPostTextEmpty, postTextController: $postTextController, isImageEmpty: $isImageEmpty, isSocialMediaSelected: $isSocialMediaSelected, isEnabledToPost: $isEnabledToPost)';
   }
 
   @override
@@ -1020,7 +1659,11 @@ class _$PostStateImpl implements _PostState {
             (identical(other.postTextController, postTextController) ||
                 other.postTextController == postTextController) &&
             (identical(other.isImageEmpty, isImageEmpty) ||
-                other.isImageEmpty == isImageEmpty));
+                other.isImageEmpty == isImageEmpty) &&
+            (identical(other.isSocialMediaSelected, isSocialMediaSelected) ||
+                other.isSocialMediaSelected == isSocialMediaSelected) &&
+            (identical(other.isEnabledToPost, isEnabledToPost) ||
+                other.isEnabledToPost == isEnabledToPost));
   }
 
   @override
@@ -1034,7 +1677,9 @@ class _$PostStateImpl implements _PostState {
       isLinkedinSelected,
       isPostTextEmpty,
       postTextController,
-      isImageEmpty);
+      isImageEmpty,
+      isSocialMediaSelected,
+      isEnabledToPost);
 
   /// Create a copy of PostState
   /// with the given fields replaced by the non-null parameter values.
@@ -1055,7 +1700,9 @@ abstract class _PostState implements PostState {
       final bool? isLinkedinSelected,
       required final bool isPostTextEmpty,
       required final TextEditingController postTextController,
-      required final bool isImageEmpty}) = _$PostStateImpl;
+      required final bool isImageEmpty,
+      required final bool isSocialMediaSelected,
+      required final bool isEnabledToPost}) = _$PostStateImpl;
 
   @override
   Set<int> get selectedIndex;
@@ -1075,6 +1722,10 @@ abstract class _PostState implements PostState {
   TextEditingController get postTextController;
   @override
   bool get isImageEmpty;
+  @override
+  bool get isSocialMediaSelected;
+  @override
+  bool get isEnabledToPost;
 
   /// Create a copy of PostState
   /// with the given fields replaced by the non-null parameter values.

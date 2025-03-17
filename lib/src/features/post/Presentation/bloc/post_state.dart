@@ -12,6 +12,8 @@ class PostState with _$PostState {
     required bool isPostTextEmpty,
     required TextEditingController postTextController,
     required bool isImageEmpty,
+    required bool isSocialMediaSelected,
+    required bool isEnabledToPost,
   }) = _PostState;
 
   factory PostState.initial() => PostState(
@@ -24,5 +26,7 @@ class PostState with _$PostState {
         isPostTextEmpty: false,
         postTextController: TextEditingController(text: ''),
         isImageEmpty: false,
+        isSocialMediaSelected: false,
+        isEnabledToPost: false,
       );
 }

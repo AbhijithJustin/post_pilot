@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:post_pilot/service_locator.dart';
+import 'package:post_pilot/src/features/post/data/models/start_auto_model.dart';
 import 'package:post_pilot/src/features/post/data/models/update_assets_text_model.dart';
 import 'package:post_pilot/src/features/post/domain/usecases/post_usecase.dart';
 
@@ -82,6 +83,36 @@ class PostBloc extends Bloc<PostEvent, PostState> {
       } else {
         emit(state.copyWith(isImageEmpty: true));
       }
+    });
+    on<StartAutomation>((event, emit) async {
+      if (state.isInstagramSelected! ||
+          state.isFacebookSelected! ||
+          state.isTwitterSelected! ||
+          state.isLinkedinSelected!) {
+        await sl<PostUsecaseStartAutomation>().call(StartAutoModel(
+            isInstagramSelected: state.isInstagramSelected!,
+            isFacebookSelected: state.isFacebookSelected!,
+            isTwitterSelected: state.isTwitterSelected!,
+            isLinkedinSelected: state.isLinkedinSelected!));
+
+        emit(state.copyWith(isSocialMediaSelected: false));
+      } else {
+        emit(state.copyWith(isSocialMediaSelected: true));
+      }
+    });
+    on<SocialMediaSelectorNotifier>((event, emit) async {
+      if (state.isInstagramSelected! ||
+          state.isFacebookSelected! ||
+          state.isTwitterSelected! ||
+          state.isLinkedinSelected!) {
+        emit(state.copyWith(isSocialMediaSelected: false));
+      } else {
+        emit(state.copyWith(isSocialMediaSelected: true));
+      }
+    });
+
+    on<SlideButtonAction>((event, emit) {
+      emit(state.copyWith(isEnabledToPost: event.value));
     });
   }
 }

@@ -32,4 +32,6 @@ void serviceLocator() {
   sl.registerSingleton<JobsUseCases>(JobsUseCases());
   sl.registerSingleton<PostUsecase>(PostUsecase());
   sl.registerSingleton<PostUsecase2>(PostUsecase2());
+  sl.registerSingleton<PostUsecaseStartAutomation>(
+      PostUsecaseStartAutomation());
 }

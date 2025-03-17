@@ -5,8 +5,7 @@ import 'package:post_pilot/src/core/widgets/app_sized_box.dart';
 import 'package:post_pilot/src/features/post/Presentation/bloc/post_bloc.dart';
 import 'package:post_pilot/src/features/post/Presentation/widgets/post_test_field.dart';
 import 'package:post_pilot/src/features/post/Presentation/widgets/social_medea_grid.dart';
-
-import '../widgets/upload_image.dart';
+import 'package:post_pilot/src/features/post/Presentation/widgets/upload_image.dart';
 
 class PostPage extends StatelessWidget {
   const PostPage({super.key});
@@ -19,6 +18,22 @@ class PostPage extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Post'),
+          actions: [
+            BlocBuilder<PostBloc, PostState>(
+              builder: (context, state) {
+                return Switch(
+                  activeColor: AppColors.primary,
+                  inactiveTrackColor: AppColors.background,
+                  inactiveThumbColor: AppColors.primary,
+                  trackOutlineColor: WidgetStateProperty.all(AppColors.primary),
+                  value: state.isEnabledToPost,
+                  onChanged: (value) {
+                    context.read<PostBloc>().add(SlideButtonAction(value));
+                  },
+                );
+              },
+            ),
+          ],
         ),
         body: SafeArea(
           child: Padding(
@@ -30,10 +45,12 @@ class PostPage extends StatelessWidget {
                 builder: (context, state) {
                   return ListView(
                     children: [
+                      AppSizedBox.hSmall,
                       UploadImage(
                         size: size,
-                        color:
-                            state.isImageEmpty ? Colors.red : AppColors.primary,
+                        color: state.isImageEmpty
+                            ? AppColors.error
+                            : AppColors.primary,
                       ),
                       AppSizedBox.hMedium,
                       Column(
@@ -43,7 +60,7 @@ class PostPage extends StatelessWidget {
                             child: Text(
                               'Place Enter Your Post Description',
                               style: TextStyle(
-                                color: Colors.red,
+                                color: AppColors.error,
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -57,23 +74,45 @@ class PostPage extends StatelessWidget {
                             },
                             postTextController: state.postTextController,
                             color: state.isPostTextEmpty
-                                ? Colors.red
+                                ? AppColors.error
                                 : AppColors.primary,
                           ),
                         ],
                       ),
                       AppSizedBox.hMedium,
-                      SocialMediaGrid(),
+                      Column(
+                        children: [
+                          Visibility(
+                            visible: state.isSocialMediaSelected,
+                            child: Text(
+                              'Place Select Social Medias',
+                              style: TextStyle(
+                                color: AppColors.error,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                          SocialMediaGrid(
+                            color: state.isSocialMediaSelected
+                                ? AppColors.error
+                                : AppColors.background,
+                          ),
+                        ],
+                      ),
                       AppSizedBox.hMedium,
                       ElevatedButton(
-                        onPressed: () async {
+                        onPressed: () {
                           // Navigator.pop(context);
+                          if (state.isEnabledToPost) {
+                            context.read<PostBloc>().add(UpdatePostText());
 
-                          context.read<PostBloc>().add(UpdatePostText());
+                            context
+                                .read<PostBloc>()
+                                .add(UploadImageToOrchestrator());
 
-                          context
-                              .read<PostBloc>()
-                              .add(UploadImageToOrchestrator());
+                            context.read<PostBloc>().add(StartAutomation());
+                          }
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: AppColors.primary,

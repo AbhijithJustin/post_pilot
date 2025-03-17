@@ -8,4 +8,8 @@ class PostEvent with _$PostEvent {
   const factory PostEvent.updatePostText() = UpdatePostText;
   const factory PostEvent.uploadImageToOrchestrator() =
       UploadImageToOrchestrator;
+  const factory PostEvent.startAutomation() = StartAutomation;
+  const factory PostEvent.socialMediaSelectorNotifier() =
+      SocialMediaSelectorNotifier;
+  const factory PostEvent.slideButtonAction(bool value) = SlideButtonAction;
 }

@@ -63,7 +63,7 @@ class UploadImage extends StatelessWidget {
                         color: color,
                       ),
                       Text(
-                        "Select a Image to upload",
+                        "Select A Image To Upload",
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: color,
