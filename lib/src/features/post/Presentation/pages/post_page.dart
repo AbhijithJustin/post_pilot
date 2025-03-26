@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:post_pilot/src/core/utils/constants/app_colors.dart';
 import 'package:post_pilot/src/core/widgets/app_sized_box.dart';
+import 'package:post_pilot/src/features/home/presentation/bloc/home_bloc.dart';
 import 'package:post_pilot/src/features/post/Presentation/bloc/post_bloc.dart';
 import 'package:post_pilot/src/features/post/Presentation/widgets/post_test_field.dart';
 import 'package:post_pilot/src/features/post/Presentation/widgets/social_medea_grid.dart';
@@ -103,7 +104,6 @@ class PostPage extends StatelessWidget {
                       AppSizedBox.hMedium,
                       ElevatedButton(
                         onPressed: () {
-                          // Navigator.pop(context);
                           if (state.isEnabledToPost) {
                             context.read<PostBloc>().add(UpdatePostText());
 
@@ -112,6 +112,10 @@ class PostPage extends StatelessWidget {
                                 .add(UploadImageToOrchestrator());
 
                             context.read<PostBloc>().add(StartAutomation());
+                            context
+                                .read<HomeBloc>()
+                                .add(BottomNavigationTapped(1));
+                            Navigator.pushReplacementNamed(context, '/home');
                           }
                         },
                         style: ElevatedButton.styleFrom(

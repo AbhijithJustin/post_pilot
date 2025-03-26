@@ -176,7 +176,7 @@ class PostApiServiceImpl extends PostApiService {
           ),
           data: {
             "startInfo": {
-              "ReleaseKey": "5c42e697-f394-427d-80ac-ff72779e5422",
+              "ReleaseKey": "6a14657e-d10f-465b-aac5-ee52e8e6599a",
               "Strategy": "ModernJobsCount",
               "JobsCount": 1,
               "InputArguments": "{}"
@@ -202,7 +202,7 @@ Future<Either> linkedinPost(String accessToken) async {
         ),
         data: {
           "startInfo": {
-            "ReleaseKey": "5c42e697-f394-427d-80ac-ff72779e5422",
+            "ReleaseKey": "1061955b-5228-4f14-86c9-aae1b8ff6723",
             "Strategy": "ModernJobsCount",
             "JobsCount": 1,
             "InputArguments": "{}"

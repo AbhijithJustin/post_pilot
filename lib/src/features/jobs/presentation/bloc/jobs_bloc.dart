@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:post_pilot/service_locator.dart';
@@ -18,9 +16,17 @@ class JobsBloc extends Bloc<JobsEvent, JobsState> {
       returnData.fold((error) {
         return emit(state.copyWith(error: error));
       }, (jobs) {
-        log(jobs[0].key.toString());
         return emit(state.copyWith(jobsData: jobs as List<JobsEntity>));
       });
     });
+  }
+
+  Stream<List<JobsEntity>> get jobsStream async* {
+    while (true) {
+      await Future.delayed(
+          Duration(seconds: 2)); // Adjust the interval as needed
+      add(GetJobs());
+      yield state.jobsData;
+    }
   }
 }

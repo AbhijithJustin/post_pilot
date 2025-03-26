@@ -102,7 +102,7 @@ class LoginPage extends StatelessWidget {
                         _passwordController.text == "Myapp@123") {
                       Navigator.pushReplacementNamed(context, '/home');
                     }
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.pushReplacementNamed(context, '/home');
                   },
                   style: ElevatedButton.styleFrom(
                     minimumSize: Size(double.infinity, 50),

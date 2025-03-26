@@ -1,6 +1,8 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:post_pilot/src/core/utils/constants/app_colors.dart';
+import 'package:post_pilot/src/features/home/presentation/bloc/home_bloc.dart';
 import 'package:post_pilot/src/features/home/presentation/widgets/bots.dart';
 import 'package:post_pilot/src/features/home/presentation/widgets/home.dart';
 import 'package:post_pilot/src/features/home/presentation/widgets/machines.dart';
@@ -14,8 +16,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _bottomNavIndex = 0; // Default index of the bottom navigation bar
-
   final _iconList = <IconData>[
     Icons.home,
     Icons.engineering,
@@ -26,30 +26,38 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: _screenList[_bottomNavIndex],
-      floatingActionButton: FloatingActionButton(
-        shape: CircleBorder(),
-        backgroundColor: AppColors.secondary,
-        child: Icon(
-          Icons.add,
-          color: AppColors.background,
-        ),
-        onPressed: () {
-          Navigator.pushNamed(context, '/post');
-        },
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      bottomNavigationBar: AnimatedBottomNavigationBar(
-        backgroundColor: AppColors.primary,
-        icons: _iconList,
-        activeColor: AppColors.secondary,
-        inactiveColor: AppColors.background,
-        activeIndex: _bottomNavIndex,
-        gapLocation: GapLocation.center,
-        notchSmoothness: NotchSmoothness.smoothEdge,
-        onTap: (index) => setState(() => _bottomNavIndex = index),
-      ),
+    return BlocBuilder<HomeBloc, HomeState>(
+      builder: (context, state) {
+        return Scaffold(
+          body: _screenList[state.selectedIndex],
+          floatingActionButton: FloatingActionButton(
+            shape: CircleBorder(),
+            backgroundColor: AppColors.secondary,
+            child: Icon(
+              Icons.add,
+              color: AppColors.background,
+            ),
+            onPressed: () {
+              Navigator.pushNamed(context, '/post');
+            },
+          ),
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerDocked,
+          bottomNavigationBar: AnimatedBottomNavigationBar(
+            borderColor: AppColors.background,
+            borderWidth: 20,
+            backgroundColor: AppColors.primary,
+            icons: _iconList,
+            activeColor: AppColors.secondary,
+            inactiveColor: AppColors.background,
+            activeIndex: state.selectedIndex,
+            gapLocation: GapLocation.center,
+            notchSmoothness: NotchSmoothness.smoothEdge,
+            onTap: (index) =>
+                context.read<HomeBloc>().add(BottomNavigationTapped(index)),
+          ),
+        );
+      },
     );
   }
 }
