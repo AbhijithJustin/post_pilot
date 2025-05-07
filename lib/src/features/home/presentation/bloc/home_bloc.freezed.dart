@@ -671,6 +671,7 @@ mixin _$HomeState {
   int get twitterFluted => throw _privateConstructorUsedError;
   int get linkedinSuccessful => throw _privateConstructorUsedError;
   int get linkedinFluted => throw _privateConstructorUsedError;
+  int get pendingJobsCount => throw _privateConstructorUsedError;
   String? get error => throw _privateConstructorUsedError;
 
   /// Create a copy of HomeState
@@ -703,6 +704,7 @@ abstract class $HomeStateCopyWith<$Res> {
       int twitterFluted,
       int linkedinSuccessful,
       int linkedinFluted,
+      int pendingJobsCount,
       String? error});
 }
 
@@ -738,6 +740,7 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
     Object? twitterFluted = null,
     Object? linkedinSuccessful = null,
     Object? linkedinFluted = null,
+    Object? pendingJobsCount = null,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
@@ -809,6 +812,10 @@ class _$HomeStateCopyWithImpl<$Res, $Val extends HomeState>
           ? _value.linkedinFluted
           : linkedinFluted // ignore: cast_nullable_to_non_nullable
               as int,
+      pendingJobsCount: null == pendingJobsCount
+          ? _value.pendingJobsCount
+          : pendingJobsCount // ignore: cast_nullable_to_non_nullable
+              as int,
       error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -843,6 +850,7 @@ abstract class _$$HomeStateImplCopyWith<$Res>
       int twitterFluted,
       int linkedinSuccessful,
       int linkedinFluted,
+      int pendingJobsCount,
       String? error});
 }
 
@@ -876,6 +884,7 @@ class __$$HomeStateImplCopyWithImpl<$Res>
     Object? twitterFluted = null,
     Object? linkedinSuccessful = null,
     Object? linkedinFluted = null,
+    Object? pendingJobsCount = null,
     Object? error = freezed,
   }) {
     return _then(_$HomeStateImpl(
@@ -947,6 +956,10 @@ class __$$HomeStateImplCopyWithImpl<$Res>
           ? _value.linkedinFluted
           : linkedinFluted // ignore: cast_nullable_to_non_nullable
               as int,
+      pendingJobsCount: null == pendingJobsCount
+          ? _value.pendingJobsCount
+          : pendingJobsCount // ignore: cast_nullable_to_non_nullable
+              as int,
       error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -976,6 +989,7 @@ class _$HomeStateImpl implements _HomeState {
       required this.twitterFluted,
       required this.linkedinSuccessful,
       required this.linkedinFluted,
+      required this.pendingJobsCount,
       this.error})
       : _instagramJobsData = instagramJobsData,
         _twitterJobsData = twitterJobsData,
@@ -1051,11 +1065,13 @@ class _$HomeStateImpl implements _HomeState {
   @override
   final int linkedinFluted;
   @override
+  final int pendingJobsCount;
+  @override
   final String? error;
 
   @override
   String toString() {
-    return 'HomeState(selectedIndex: $selectedIndex, instagramJobsData: $instagramJobsData, twitterJobsData: $twitterJobsData, facebookJobsData: $facebookJobsData, linkedinJobsData: $linkedinJobsData, jobsData: $jobsData, successful: $successful, fluted: $fluted, stopped: $stopped, instagramSuccessful: $instagramSuccessful, instagramFluted: $instagramFluted, fbSuccessful: $fbSuccessful, fbFluted: $fbFluted, twitterSuccessful: $twitterSuccessful, twitterFluted: $twitterFluted, linkedinSuccessful: $linkedinSuccessful, linkedinFluted: $linkedinFluted, error: $error)';
+    return 'HomeState(selectedIndex: $selectedIndex, instagramJobsData: $instagramJobsData, twitterJobsData: $twitterJobsData, facebookJobsData: $facebookJobsData, linkedinJobsData: $linkedinJobsData, jobsData: $jobsData, successful: $successful, fluted: $fluted, stopped: $stopped, instagramSuccessful: $instagramSuccessful, instagramFluted: $instagramFluted, fbSuccessful: $fbSuccessful, fbFluted: $fbFluted, twitterSuccessful: $twitterSuccessful, twitterFluted: $twitterFluted, linkedinSuccessful: $linkedinSuccessful, linkedinFluted: $linkedinFluted, pendingJobsCount: $pendingJobsCount, error: $error)';
   }
 
   @override
@@ -1094,30 +1110,34 @@ class _$HomeStateImpl implements _HomeState {
                 other.linkedinSuccessful == linkedinSuccessful) &&
             (identical(other.linkedinFluted, linkedinFluted) ||
                 other.linkedinFluted == linkedinFluted) &&
+            (identical(other.pendingJobsCount, pendingJobsCount) ||
+                other.pendingJobsCount == pendingJobsCount) &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      selectedIndex,
-      const DeepCollectionEquality().hash(_instagramJobsData),
-      const DeepCollectionEquality().hash(_twitterJobsData),
-      const DeepCollectionEquality().hash(_facebookJobsData),
-      const DeepCollectionEquality().hash(_linkedinJobsData),
-      const DeepCollectionEquality().hash(_jobsData),
-      successful,
-      fluted,
-      stopped,
-      instagramSuccessful,
-      instagramFluted,
-      fbSuccessful,
-      fbFluted,
-      twitterSuccessful,
-      twitterFluted,
-      linkedinSuccessful,
-      linkedinFluted,
-      error);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        selectedIndex,
+        const DeepCollectionEquality().hash(_instagramJobsData),
+        const DeepCollectionEquality().hash(_twitterJobsData),
+        const DeepCollectionEquality().hash(_facebookJobsData),
+        const DeepCollectionEquality().hash(_linkedinJobsData),
+        const DeepCollectionEquality().hash(_jobsData),
+        successful,
+        fluted,
+        stopped,
+        instagramSuccessful,
+        instagramFluted,
+        fbSuccessful,
+        fbFluted,
+        twitterSuccessful,
+        twitterFluted,
+        linkedinSuccessful,
+        linkedinFluted,
+        pendingJobsCount,
+        error
+      ]);
 
   /// Create a copy of HomeState
   /// with the given fields replaced by the non-null parameter values.
@@ -1147,6 +1167,7 @@ abstract class _HomeState implements HomeState {
       required final int twitterFluted,
       required final int linkedinSuccessful,
       required final int linkedinFluted,
+      required final int pendingJobsCount,
       final String? error}) = _$HomeStateImpl;
 
   @override
@@ -1183,6 +1204,8 @@ abstract class _HomeState implements HomeState {
   int get linkedinSuccessful;
   @override
   int get linkedinFluted;
+  @override
+  int get pendingJobsCount;
   @override
   String? get error;
 

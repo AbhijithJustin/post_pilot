@@ -20,6 +20,7 @@ class HomeState with _$HomeState {
     required int twitterFluted,
     required int linkedinSuccessful,
     required int linkedinFluted,
+    required int pendingJobsCount,
     String? error,
   }) = _HomeState;
 
@@ -42,5 +43,6 @@ class HomeState with _$HomeState {
         twitterFluted: 0,
         linkedinSuccessful: 0,
         linkedinFluted: 0,
+        pendingJobsCount: 0,
       );
 }

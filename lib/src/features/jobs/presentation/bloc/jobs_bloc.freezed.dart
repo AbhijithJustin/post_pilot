@@ -172,6 +172,7 @@ abstract class GetJobs implements JobsEvent {
 /// @nodoc
 mixin _$JobsState {
   List<JobsEntity> get jobsData => throw _privateConstructorUsedError;
+  int get pendingJobsCount => throw _privateConstructorUsedError;
   String? get error => throw _privateConstructorUsedError;
 
   /// Create a copy of JobsState
@@ -186,7 +187,7 @@ abstract class $JobsStateCopyWith<$Res> {
   factory $JobsStateCopyWith(JobsState value, $Res Function(JobsState) then) =
       _$JobsStateCopyWithImpl<$Res, JobsState>;
   @useResult
-  $Res call({List<JobsEntity> jobsData, String? error});
+  $Res call({List<JobsEntity> jobsData, int pendingJobsCount, String? error});
 }
 
 /// @nodoc
@@ -205,6 +206,7 @@ class _$JobsStateCopyWithImpl<$Res, $Val extends JobsState>
   @override
   $Res call({
     Object? jobsData = null,
+    Object? pendingJobsCount = null,
     Object? error = freezed,
   }) {
     return _then(_value.copyWith(
@@ -212,6 +214,10 @@ class _$JobsStateCopyWithImpl<$Res, $Val extends JobsState>
           ? _value.jobsData
           : jobsData // ignore: cast_nullable_to_non_nullable
               as List<JobsEntity>,
+      pendingJobsCount: null == pendingJobsCount
+          ? _value.pendingJobsCount
+          : pendingJobsCount // ignore: cast_nullable_to_non_nullable
+              as int,
       error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -228,7 +234,7 @@ abstract class _$$JobsStateImplCopyWith<$Res>
       __$$JobsStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<JobsEntity> jobsData, String? error});
+  $Res call({List<JobsEntity> jobsData, int pendingJobsCount, String? error});
 }
 
 /// @nodoc
@@ -245,6 +251,7 @@ class __$$JobsStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? jobsData = null,
+    Object? pendingJobsCount = null,
     Object? error = freezed,
   }) {
     return _then(_$JobsStateImpl(
@@ -252,6 +259,10 @@ class __$$JobsStateImplCopyWithImpl<$Res>
           ? _value._jobsData
           : jobsData // ignore: cast_nullable_to_non_nullable
               as List<JobsEntity>,
+      pendingJobsCount: null == pendingJobsCount
+          ? _value.pendingJobsCount
+          : pendingJobsCount // ignore: cast_nullable_to_non_nullable
+              as int,
       error: freezed == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -263,7 +274,10 @@ class __$$JobsStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$JobsStateImpl implements _JobsState {
-  _$JobsStateImpl({required final List<JobsEntity> jobsData, this.error})
+  _$JobsStateImpl(
+      {required final List<JobsEntity> jobsData,
+      required this.pendingJobsCount,
+      this.error})
       : _jobsData = jobsData;
 
   final List<JobsEntity> _jobsData;
@@ -275,11 +289,13 @@ class _$JobsStateImpl implements _JobsState {
   }
 
   @override
+  final int pendingJobsCount;
+  @override
   final String? error;
 
   @override
   String toString() {
-    return 'JobsState(jobsData: $jobsData, error: $error)';
+    return 'JobsState(jobsData: $jobsData, pendingJobsCount: $pendingJobsCount, error: $error)';
   }
 
   @override
@@ -288,12 +304,14 @@ class _$JobsStateImpl implements _JobsState {
         (other.runtimeType == runtimeType &&
             other is _$JobsStateImpl &&
             const DeepCollectionEquality().equals(other._jobsData, _jobsData) &&
+            (identical(other.pendingJobsCount, pendingJobsCount) ||
+                other.pendingJobsCount == pendingJobsCount) &&
             (identical(other.error, error) || other.error == error));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_jobsData), error);
+  int get hashCode => Object.hash(runtimeType,
+      const DeepCollectionEquality().hash(_jobsData), pendingJobsCount, error);
 
   /// Create a copy of JobsState
   /// with the given fields replaced by the non-null parameter values.
@@ -307,10 +325,13 @@ class _$JobsStateImpl implements _JobsState {
 abstract class _JobsState implements JobsState {
   factory _JobsState(
       {required final List<JobsEntity> jobsData,
+      required final int pendingJobsCount,
       final String? error}) = _$JobsStateImpl;
 
   @override
   List<JobsEntity> get jobsData;
+  @override
+  int get pendingJobsCount;
   @override
   String? get error;
 

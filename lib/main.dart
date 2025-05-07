@@ -15,6 +15,7 @@ import 'package:post_pilot/src/features/home/presentation/widgets/linkedin.dart'
 import 'package:post_pilot/src/features/home/presentation/widgets/twitter.dart';
 import 'package:post_pilot/src/features/jobs/presentation/bloc/jobs_bloc.dart';
 import 'package:post_pilot/src/features/jobs/presentation/pages/jobs_page.dart';
+import 'package:post_pilot/src/features/jobs/presentation/widgets/pending_job.dart';
 import 'src/features/post/Presentation/pages/post_page.dart';
 
 void main() {
@@ -67,6 +68,8 @@ class MyApp extends StatelessWidget {
               return PopUpTransitionRoute(page: Twitter());
             case '/linkedIn':
               return PopUpTransitionRoute(page: LinkedIn());
+            case '/pendingJob':
+              return PopUpTransitionRoute(page: PendingJob());
 
             default:
               return null;

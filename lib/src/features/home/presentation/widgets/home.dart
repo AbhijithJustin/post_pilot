@@ -24,13 +24,34 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Home"),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.notifications),
-            onPressed: () {},
+          BlocBuilder<HomeBloc, HomeState>(
+            builder: (context, state) {
+              return IconButton(
+                icon: Stack(
+                  alignment: Alignment.topRight,
+                  children: [
+                    Icon(Icons.notifications),
+                    Visibility(
+                      visible: state.pendingJobsCount != 0,
+                      child: CircleAvatar(
+                        radius: 6,
+                        backgroundColor: AppColors.error,
+                        child: Text(
+                          state.pendingJobsCount.toString(),
+                          style: TextStyle(fontSize: 7),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, '/pendingJob');
+                },
+              );
+            },
           ),
         ],
       ),
-      drawer: Drawer(),
       body: Padding(
         padding: const EdgeInsets.all(AppDimensions.paddingSmall),
         child: RefreshIndicator(

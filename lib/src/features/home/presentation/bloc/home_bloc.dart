@@ -21,6 +21,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
       returnData.fold((error) {
         return emit(state.copyWith(error: error));
       }, (jobs) {
+        final pendingJobCount =
+            jobs.where((job) => job.state == 'Pending').length;
         final instagramJobs =
             jobs.where((job) => job.releaseName == 'Instagram').toList();
         final facebookJobs =
@@ -56,22 +58,24 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
             linkedInJobs.where((job) => job.state != 'Successful').length;
 
         return emit(state.copyWith(
-            jobsData: jobs as List<JobsEntity>,
-            instagramJobsData: instagramJobs,
-            twitterJobsData: twitterJobs,
-            facebookJobsData: facebookJobs,
-            linkedinJobsData: linkedInJobs,
-            successful: successfulJobsCount,
-            fluted: failedJobsCount,
-            stopped: stoppedJobsCount,
-            instagramSuccessful: successfulInstagramJobsCount,
-            instagramFluted: failedInstagramJobsCount,
-            fbSuccessful: successfulFacebookJobsCount,
-            fbFluted: failedFacebookJobsCount,
-            twitterSuccessful: successfulTwitterJobsCount,
-            twitterFluted: failedTwitterJobsCount,
-            linkedinSuccessful: successfulLinkedInJobsCount,
-            linkedinFluted: failedLinkedInJobsCount));
+          jobsData: jobs as List<JobsEntity>,
+          instagramJobsData: instagramJobs,
+          twitterJobsData: twitterJobs,
+          facebookJobsData: facebookJobs,
+          linkedinJobsData: linkedInJobs,
+          successful: successfulJobsCount,
+          fluted: failedJobsCount,
+          stopped: stoppedJobsCount,
+          instagramSuccessful: successfulInstagramJobsCount,
+          instagramFluted: failedInstagramJobsCount,
+          fbSuccessful: successfulFacebookJobsCount,
+          fbFluted: failedFacebookJobsCount,
+          twitterSuccessful: successfulTwitterJobsCount,
+          twitterFluted: failedTwitterJobsCount,
+          linkedinSuccessful: successfulLinkedInJobsCount,
+          linkedinFluted: failedLinkedInJobsCount,
+          pendingJobsCount: pendingJobCount,
+        ));
       });
     });
 

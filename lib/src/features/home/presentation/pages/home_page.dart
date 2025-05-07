@@ -3,26 +3,25 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:post_pilot/src/core/utils/constants/app_colors.dart';
 import 'package:post_pilot/src/features/home/presentation/bloc/home_bloc.dart';
-import 'package:post_pilot/src/features/home/presentation/widgets/bots.dart';
 import 'package:post_pilot/src/features/home/presentation/widgets/home.dart';
-import 'package:post_pilot/src/features/home/presentation/widgets/machines.dart';
 import 'package:post_pilot/src/features/jobs/presentation/pages/jobs_page.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class HomePage extends StatelessWidget {
+  HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   final _iconList = <IconData>[
     Icons.home,
     Icons.engineering,
-    Icons.smart_toy,
-    Icons.precision_manufacturing,
+    // Icons.smart_toy,
+    // Icons.precision_manufacturing,
   ];
-  final _screenList = <Widget>[Home(), JobsPage(), Bots(), Machines()];
+
+  final _screenList = <Widget>[
+    Home(),
+    JobsPage(),
+    // Bots(),
+    // Machines(),
+  ];
 
   @override
   Widget build(BuildContext context) {

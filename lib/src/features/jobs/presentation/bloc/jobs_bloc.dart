@@ -16,7 +16,12 @@ class JobsBloc extends Bloc<JobsEvent, JobsState> {
       returnData.fold((error) {
         return emit(state.copyWith(error: error));
       }, (jobs) {
-        return emit(state.copyWith(jobsData: jobs as List<JobsEntity>));
+        final pendingJobsCount =
+            jobs.where((job) => job.state == 'Pending').length;
+
+        return emit(state.copyWith(
+            jobsData: jobs as List<JobsEntity>,
+            pendingJobsCount: pendingJobsCount));
       });
     });
   }

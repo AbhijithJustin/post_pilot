@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:post_pilot/src/core/widgets/app_sized_box.dart';
 import 'package:post_pilot/src/features/auth/presentation/bloc/auth_bloc.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../core/utils/constants/app_colors.dart';
 
@@ -11,9 +12,26 @@ class LoginPage extends StatelessWidget {
 
   LoginPage({super.key});
 
+  Future<void> _checkLoginStatus(BuildContext context) async {
+    final preferences = await SharedPreferences.getInstance();
+    final savedEmail = preferences.getString('email');
+    final savedPassword = preferences.getString('password');
+
+    if (savedEmail != null && savedPassword != null) {
+      Navigator.pushReplacementNamed(context, '/home');
+    }
+  }
+
+  Future<void> _saveLoginData(String email, String password) async {
+    final preferences = await SharedPreferences.getInstance();
+    await preferences.setString('email', email);
+    await preferences.setString('password', password);
+  }
+
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      _checkLoginStatus(context);
       BlocProvider.of<AuthBloc>(context)
           .add(AuthEvent.tokenSaveToSharedPreferences());
     });
@@ -100,9 +118,15 @@ class LoginPage extends StatelessWidget {
                   onPressed: () async {
                     if (_emailController.text == "myapp@gmail.com" &&
                         _passwordController.text == "Myapp@123") {
+                      await _saveLoginData(
+                          _emailController.text, _passwordController.text);
                       Navigator.pushReplacementNamed(context, '/home');
+                    } else {
+                      // Show error message
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('Invalid credentials')),
+                      );
                     }
-                    Navigator.pushReplacementNamed(context, '/home');
                   },
                   style: ElevatedButton.styleFrom(
                     minimumSize: Size(double.infinity, 50),

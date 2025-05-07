@@ -8,39 +8,19 @@ import 'package:post_pilot/src/core/widgets/app_sized_box.dart';
 import 'package:post_pilot/src/features/jobs/domain/entities/jobs.dart';
 import 'package:post_pilot/src/features/jobs/presentation/bloc/jobs_bloc.dart';
 
-class JobsPage extends StatelessWidget {
-  const JobsPage({super.key});
+class PendingJob extends StatelessWidget {
+  const PendingJob({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Jobs"),
+        title: const Text("Pending Jobs"),
         actions: [
-          BlocBuilder<JobsBloc, JobsState>(
-            builder: (context, state) {
-              return IconButton(
-                icon: Stack(
-                  alignment: Alignment.topRight,
-                  children: [
-                    Icon(Icons.notifications),
-                    Visibility(
-                      visible: state.pendingJobsCount != 0,
-                      child: CircleAvatar(
-                        radius: 6,
-                        backgroundColor: AppColors.error,
-                        child: Text(
-                          state.pendingJobsCount.toString(),
-                          style: TextStyle(fontSize: 7),
-                        ),
-                      ),
-                    )
-                  ],
-                ),
-                onPressed: () {
-                  Navigator.pushNamed(context, '/pendingJob');
-                },
-              );
+          IconButton(
+            icon: const Icon(Icons.home),
+            onPressed: () {
+              Navigator.pushNamed(context, '/home');
             },
           ),
         ],
@@ -63,17 +43,23 @@ class JobsPage extends StatelessWidget {
           } else {
             final jobsData = List<JobsEntity>.from(snapshot.data!);
 
-            jobsData.sort((a, b) {
-              if (a.startTime == null && b.startTime == null) return 0;
-              if (a.startTime == null) return 1;
-              if (b.startTime == null) return -1;
-              return b.startTime!.compareTo(a.startTime!);
-            });
-
+            final filteredJobsData =
+                jobsData.where((job) => job.state == "Pending").toList();
+            if (filteredJobsData.isEmpty) {
+              return Center(
+                child: Text(
+                  "No Pending Jobs",
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: AppColors.primary,
+                  ),
+                ),
+              );
+            }
             return ListView.builder(
-              itemCount: jobsData.length,
+              itemCount: filteredJobsData.length,
               itemBuilder: (context, index) {
-                final job = jobsData[index];
+                final job = filteredJobsData[index];
                 final startTime = job.startTime != null
                     ? DateTime.parse(job.startTime!.toString())
                     : null;
